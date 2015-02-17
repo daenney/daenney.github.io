@@ -1,0 +1,22 @@
+= The start of 2015
+:published_at: 2015-02-17
+
+So as I said I would blog regularily, and then I didn't. That's because I'm a techy and while working and tweaking the blog I obviously broke it and until now haven't really found the time to fix it. Just wasn't at the top of my priority list because all solutions to blogging through Github kinda sucked. Now that it is fixed, lets catch up.
+
+== Settling in
+
+I now have my own space here that I affectionately refer to as home :). It's nice to get home from work. To relax at home. To be home.
+
+== Boston and New York
+
+January was mostly spent outside of the country. I was in Boston and New York for two weeks to work with our teams there, hold workshops, putting names to faces and getting to know people. I had a blast, it was a great two weeks.
+
+== Puppet Camp Amsterdam
+
+Obviously staying in the conutry for more than 24 hours wouldn't be fun so shortly after arriving back from New York I zipped off to Amsterdam and held a talk called https://www.youtube.com/watch?v=pOHQL0Nw2jo[Manifests of future past].
+
+I spent the rest of the week in The Netherlands visiting friends and family and working remotely.
+
+== Fixing the blog
+
+Recently http://hubpress.io[HubPress] has launched and so far so awesome. Still debating between HubPress and sliced bread. It takes a bit getting used to blogging in AsciiDoc and the editor in HubPress itself can be a bit quirky at times. That said AsciiDoc does give me more control over my content and the rendering thereof and the split view editor with content on one side and the rendered version on the other is just fantastic.
