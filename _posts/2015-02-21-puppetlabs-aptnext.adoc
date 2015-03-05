@@ -46,3 +46,5 @@ We're removing quite a few things but in return we're introducing some of the bu
 We're not done, yet. Most of the things I've described here are reflected on the next branch. We're also hard at work to getting the documetation back into order, write the necessary examples and provide a migration guide for when we release 2.0.0.
 
 We also have plans to release a 3.0.0 version once Puppet 4 has seen some uptake leveraging the new Type system to do parameter validation and other features. This release will likely not break antyhing on the API level of apt, we'll just require newer features in Puppet itself.
+
+Working with Morgan on this has been a very rewarding experience. We had some excellent discussions about what we were doing and managed to go through most of the changes at break-neck speed. Except when Travis-CI decided not to run tests.
