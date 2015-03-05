@@ -28,7 +28,7 @@ We identified a few things that we were unhappy with:
 We're removing quite a few things but in return we're introducing some of the building blocks that will help you easily recreate the old behaviour.
 
 * `apt::setting`: A new defined type to write configuration entries for apt. Based on the prefix of the resource name `conf-`, `pref-` or `list-` it will write the file to either `/etc/apt/conf.d`, `/etc/apt/preferences.d` or `/etc/apt/sources.list.d`. You'll almost never need an `apt::setting { 'list-somerepo': }` but it's used internally by `apt::source` and any other place we write configuration. It supports things as `priority`, passing in a `source` or `content` and knows to notify the `apt_update` `exec`.
-* `sources, `keys`, `settings` and `ppas` on the main class. Every of those options expects a hash of resources and leverages `create_resources()` to create resource entries in the catalog. This means you can now fully drive all apt configuration changes from a data binding backend like Hiera.
+* `sources`, `keys`, `settings` and `ppas` on the main class. Every of those options expects a hash of resources and leverages `create_resources()` to create resource entries in the catalog. This means you can now fully drive all apt configuration changes from a data binding backend like Hiera.
 
 == Things that have remained but changed
 
@@ -36,12 +36,13 @@ We're removing quite a few things but in return we're introducing some of the bu
 * Overall spring cleaning and bringing the module in line with our current best practices of module design.
 * Raise our dependencies. We've been stuck with stdlib 2.x and old Puppet versions for too long.
 * The `purge_*` options and their defaults have changed. We now accept a `purge` hash with four keys, `sources.list`, `sources.list.d`, `preferences` and `preferences.d`. They all default to `true` now too. You can pass a partial hash to `purge`. Instead of needing to specify all entries if you want to override only one of the purge entries, only pass in a hash of the entries you want to override and we'll take care to merge the rest in there.
+* The `key` option on `apt::source` can now take a hash allowing you to pass additional parameters through to the underlying `apt::key` and `apt_key` that ends up getting called.
 * The `update_*` options have been consolidated into a single hash with the same behaviour as the `purge` hash.
 * The `proxy_*` options have been consolidated into a single hash with the same behaviour as the `purge` and `update` hash. Additionally those proxy options are now also used by `apt::ppa` and you can turn the option to proxy HTTPS requests on or off. It defaults to off.
 * We've removed a set of prefixes on `apt::key` and `apt_key`. Things that were named along the lines of `key_server` are now simply called `server` as the prefix was redundant.
 
 == Status
 
-We're not done, yet. Some of the things I've described here aren't reflected on the next branch just yet but they are coming. We're also hard at work to getting the documetation back into order, write the necessary examples and provide a migration guide for when we release 2.0.0.
+We're not done, yet. Most of the things I've described here are reflected on the next branch. We're also hard at work to getting the documetation back into order, write the necessary examples and provide a migration guide for when we release 2.0.0.
 
 We also have plans to release a 3.0.0 version once Puppet 4 has seen some uptake leveraging the new Type system to do parameter validation and other features. This release will likely not break antyhing on the API level of apt, we'll just require newer features in Puppet itself.
