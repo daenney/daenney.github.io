@@ -1,5 +1,6 @@
 = (In)visibility
 :hp-tags: gay, lgbtq, tech, technology
+:published-at: 2015-03-19
 
 After my post on https://daenney.github.io/2015/03/16/LGBTQ-in-tech.html[LGBTQ in tech] a lot of people reached out to me, thanking me for the post, with a lot of kind words and some even with a resounding "yes that's me too". It's been heartwarming to see the support this story gathered and how the Puppet community, which is the one I interact with the most, reacted to it.
 
