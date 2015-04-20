@@ -1,5 +1,5 @@
 = Open source identity and abandonment issues
-:hp-tags: puppet pypuppetdb puppetboard community
+:hp-tags: puppet, pypuppetdb, puppetboard, community
 
 Today I made one of the hardest decisions I've made in a while. I decided to give up maintainership of two projects that I originally started. The projcets are pypuppetdb, a library to talk to the PuppetDB API, and Puppetboard, a dashboard for PuppetDB that leverages pypuppetdb.
 
