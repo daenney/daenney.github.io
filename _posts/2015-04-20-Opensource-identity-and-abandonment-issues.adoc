@@ -1,7 +1,7 @@
 = Opensource identity and abandonment issues
 :hp-tags: puppet pypuppetdb puppetboard community
 
-Today I made one of the hardest decisions I've made in a while. I decided to give up maintainership of two projects that I originally started. The projcets are pypuppetdb, a library to talk to the PuppetDB API, and Puppetboard, a dashboard for PuppetDB that leverages pypuppetdb.
+Today I made one of the hardest decisions I've made in a while. I decided to give up maintainership of two projects that I originally started. The projects are pypuppetdb, a library to talk to the PuppetDB API, and Puppetboard, a dashboard for PuppetDB that leverages pypuppetdb.
 
 Both projects started two years ago during my time at Nedap. The existing open source dashboards for Puppet sort of sucked and none of them were using PuppetDB so we were storing lots of duplicate data and in an inefficient manner too.
 
