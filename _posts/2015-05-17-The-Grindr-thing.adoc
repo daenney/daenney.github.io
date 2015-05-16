@@ -1,0 +1,33 @@
+= The Grindr thing
+
+It's no secret, even to straight people, that the gay community has a very low-entry hookup app called Grindr. Whenever I show it to straight friends they are either (slightly) shocked that this is a thing or green with envy.
+
+Grindr is meant to be an app for a quick hookup but there's people on there too that are looking for dates. Some are even capable of holding a conversation without a dick in their mouth.
+
+Regardless of how amazing Grindr is, it's also the most broken piece of tech or social network that I've ever come across. Yes I use the app too. No I don't just jump every random guy that comes across my screen.
+
+The basic premise is that you can load upto 200 g(a|u)ys from around you (geo location fluff and what not), see their picture, a basic profile, their online status and if interested message eachother.
+
+Grindr by default does not support notifications, which you'd think would be a core thing to offer. Instead they provide a subscription service called Grindr Xtra that for a monthly fee gives you customer support, loading more guys, saved phrases (which my OS and keyboard can do just fine themselves), an online-only view, no ads and, you guessed it, push notifications.
+
+Now I understand that they want to make some money off the platform and they totally should but for a hookup/dating app to not provide push notifications seems like a ridiculous thing to try to monetize on.
+
+Thing is, I would never buy Grindr Xtra for the notifications because it is categorically incapable of even correctly reflecting when users are online. It's also extraordinarily bad at guaranteeing message delivery, which is shocking considering this is the communication method they're providing. 
+
+I've also noticed that Grindr blackholes messages that contain names of alternative messaging apps, like WhatsApp or Kik. Not every time all the time though, which makes this more clever as it's hard to prove. It would require a far larger sampling of the platform and some more decent analysis but the coincidence is just too perfect to chalk it up to a network problem (which their app should deal with) or temporary platform glitch. The reason I am pretty sure they scan messages and act on them is that whenever I use a phrase a couple of times I get a popup for Grindr Xtra advertising with the fact that it allows me to save phrases.
+
+Back to the online status thing though, because that's what annoys me the most. For whatever reason their platform is incapable of correctly reflecting online/offline status. Whenever you tap on someone who's online (the green dot) you've got no guarantee if they actually are or if this is an outdated status of about 10-15m ago. That's on average the time it appears for a persons status to propagate to clients. This makes it incredibly difficult to have a converasation, or even just "hi wanna bang" as you have no clue if they'll actually have gotten your message or if they've already quit the app.
+
+Correctly showing presence should be the number 1 thing a messaging app gets right, especially one geared towards hooking up. Unfortunately Grindr is all over the place here and even shows different online/offline statusses for the same person depending on if you're looking at the main screen or the message list.
+
+So if it's actually pretty terrible at being good at what it should be good at, why do so many still use it? There's probably a few reasons:
+
+* They were the first
+* The alternatives aren't much better
+* Just about everyone is on Grindr too
+
+Grindr was the first app to ever offer this kind of service and as such exploded. It even made it onto Top Gear with Jeremy Clarckson showing off how he could cruise for guys using the app. It's incredibly hard to beat that kind of publicity and the name/status that comes with it.
+
+Most of the other apps are just as terrible. They get notificaations wrong, messaging wrong or just feel awkward in different ways. Also just about everyone there is on Grindr too.
+
+Because of being the first they've pretty much amassaed the biggest user base and it doesn't look to be shrinking any time soon. Though the Nordics have their usual "we have our own" going with QX, which warrants a post on how atrocious it is all to its own, Grindr is still very well stocked.
