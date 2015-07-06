@@ -10,9 +10,9 @@
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="shortcut icon" href="https://daenney.github.io/themes/Casper/favicon.ico">
+    <link rel="shortcut icon" href="//daenney.github.io/themes/Casper/favicon.ico">
 
-    <link rel="stylesheet" type="text/css" href="https://daenney.github.io/themes/Casper/assets/css/screen.css?v=1.0.0" />
+    <link rel="stylesheet" type="text/css" href="//daenney.github.io/themes/Casper/assets/css/screen.css?v=1.0.0" />
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400" />
 
     <link rel="canonical" href="https://daenney.github.io/2015/03/05/puppetlabs-aptnext.html" />
@@ -23,7 +23,7 @@
     <meta property="og:description" content="As some of you know I&amp;#8217;m the unofficial maintainer of the apt module from Puppetlabs. Together with Morgan Haskel from the Puppetlabs Module Team we try and keep that module up to date and in good shape. The..." />
     <meta property="og:url" content="https://daenney.github.io/2015/03/05/puppetlabs-aptnext.html" />
     <meta property="article:published_time" content="2015-03-04T23:00:00.000Z" />
-    <meta property="article:modified_time" content="2015-03-05T16:11:58.223Z" />
+    <meta property="article:modified_time" content="2015-07-06T15:49:57.312Z" />
     <meta property="article:tag" content="puppet" />
     <meta property="article:tag" content="puppetlabs" />
     <meta property="article:tag" content="apt" />
@@ -49,7 +49,7 @@
     "headline": "puppetlabs-apt/next",
     "url": "https://daenney.github.io/2015/03/05/puppetlabs-aptnext.html",
     "datePublished": "2015-03-04T23:00:00.000Z",
-    "dateModified": "2015-03-05T16:11:58.223Z",
+    "dateModified": "2015-07-06T15:49:57.312Z",
     "keywords": "puppet,  puppetlabs,  apt,  puppetlabs-apt",
     "description": "As some of you know I&amp;#8217;m the unofficial maintainer of the apt module from Puppetlabs. Together with Morgan Haskel from the Puppetlabs Module Team we try and keep that module up to date and in good shape. The..."
 }
@@ -57,8 +57,9 @@
 
     <meta name="generator" content="Ghost ?" />
     <link rel="alternate" type="application/rss+xml" title="Daenney" href="https://daenney.github.io/rss" />
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/default.min.css">
 </head>
-<body class="post-template tag-undefined tag-undefined tag-undefined tag-undefined">
+<body class="post-template tag-puppet tag-puppetlabs tag-apt tag-puppetlabs-apt">
 
     
 
@@ -72,12 +73,12 @@
 
 <main class="content" role="main">
 
-    <article class="post tag-undefined tag-undefined tag-undefined tag-undefined">
+    <article class="post tag-puppet tag-puppetlabs tag-apt tag-puppetlabs-apt">
 
         <header class="post-header">
             <h1 class="post-title">puppetlabs-apt/next</h1>
             <section class="post-meta">
-                <time class="post-date" datetime="2015-03-05">05 March 2015</time>  on <a href="https://daenney.github.io/tag/puppet">puppet</a>, <a href="https://daenney.github.io/tag/ puppetlabs"> puppetlabs</a>, <a href="https://daenney.github.io/tag/ apt"> apt</a>, <a href="https://daenney.github.io/tag/ puppetlabs-apt"> puppetlabs-apt</a>
+                <time class="post-date" datetime="2015-03-05">05 March 2015</time>  on <a href="https://daenney.github.io/tag/puppet">puppet</a>, <a href="https://daenney.github.io/tag/puppetlabs"> puppetlabs</a>, <a href="https://daenney.github.io/tag/apt"> apt</a>, <a href="https://daenney.github.io/tag/puppetlabs-apt"> puppetlabs-apt</a>
             </section>
         </header>
 
@@ -253,10 +254,21 @@
         <section class="poweredby">Proudly published with <a href="http://hubpress.io">HubPress</a></section>
     </footer>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js?v="></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js?v="></script> <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment-with-locales.min.js?v="></script> <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js?v="></script> 
+      <script type="text/javascript">
+        jQuery( document ).ready(function() {
+          // change date with ago
+          jQuery('ago.ago').each(function(){
+            var element = jQuery(this).parent();
+            element.html( moment(element.text()).fromNow());
+          });
+        });
 
-    <script type="text/javascript" src="https://daenney.github.io/themes/Casper/assets/js/jquery.fitvids.js?v=1.0.0"></script>
-    <script type="text/javascript" src="https://daenney.github.io/themes/Casper/assets/js/index.js?v=1.0.0"></script>
+        hljs.initHighlightingOnLoad();      
+      </script>
+
+    <script type="text/javascript" src="//daenney.github.io/themes/Casper/assets/js/jquery.fitvids.js?v=1.0.0"></script>
+    <script type="text/javascript" src="//daenney.github.io/themes/Casper/assets/js/index.js?v=1.0.0"></script>
 
 </body>
 </html>
