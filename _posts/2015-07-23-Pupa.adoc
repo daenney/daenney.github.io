@@ -37,7 +37,7 @@ https://github.com/puppetlabs/r10k[r10k] is used to deploy the environment. Esse
 
 https://github.com/TomPoulton/hiera-eyaml[hiera-eyaml] is what I'm going to use to encrypt sensitive tokens such as passwords, public and private keys etc. Since this repository is fully open that's a must. I can't have everyone on the internet walking around with my credentials.
 
-I'm pretty sure this will go wrong a couple of times forcing me to go a key rollover but that is part of the exercise too. There are other organisations that fully open source their Puppet configuration, I don't see why I shouldn't.
+I'm pretty sure this will go wrong a couple of times forcing me to do a key rollover but that is part of the exercise too. There are other organisations that fully open source their Puppet configuration, I don't see why I shouldn't.
 
 == Configuration
 
