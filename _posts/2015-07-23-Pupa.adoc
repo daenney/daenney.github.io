@@ -1,0 +1,61 @@
+= Pupa
+
+Bootstrapping a modern, r10k powered, masterless, Puppet 4 setup on Debian and Ubuntu.
+
+https://github.com/daenney/pupa[Pupa] is a toy project of mine. Essentially I decided to bring all my personal machines under full Puppet control. Inspired by how our Puppet setup works at my job I decided to go for a masterless setup.
+
+The problem really is to get Puppet on your machine. Once it's there everything else is easy and as you'll see if you look at the script I'm actually using Puppet to bootstrap part of itself.
+
+Pupa ends up being two things; a bootstrap script that will get Puppet installed and move all the necessary configuration in place, and my collection of manifests for how I want my machines to be configured.
+
+== Bash
+
+`pupa` currently stands tall at about 170 lines of Bash, of which around 90 of them are boilerplate such as logging functions, setting up terminal colouring etc.
+
+Once we've managed to install Puppet 4 on the machine, using the AIO packages Puppetlabs provides, we then start using Puppet itself to do the rest of the work.
+
+Relying on Puppet to do the rest of the boostrapping makes `pupa` remarkably resillient. We only have to concern ourselves with making sure the first part is idempotent and once we have Puppet it takes care of that part of the problem for us. It also has the nice benefit that we can bootstrap most of our setup with simple Puppet manifests, something I am much better at writing than Bash.
+
+As it currently stands you can actually run `pupa` continuously and it won't harm your system. It's not just a one-off thing you can only run to initialise your machine which should you run it again will destroy all things.
+
+== Components
+
+Pupa is made up of:
+
+* Puppet 4 and its components:
+** Puppet 4
+** Facter 3
+** Hiera 3
+** Mcollective 2
+* r10k
+* hiera-eyaml
+
+This is fairly representative of a modern Puppet stack, with the exception that we're missing PuppetDB. In this case that's on purpose, I simply don't need it. I might end up spinning a separate PuppetDB instance so that machines can upload facts and catalogs to their for other purposes but I don't intend to rely on exported resources and such. I also take care of disabling mcollective since I won't be doing any multi-node fanciness and don't want to rely on middleware/brokers.
+
+https://github.com/puppetlabs/r10k[r10k] is used to deploy the environment. Essentially it takes the modules as defined in the `Puppetfile` and all the other files from Pupa and moves them into the right place for directory environments.
+
+https://github.com/TomPoulton/hiera-eyaml[hiera-eyaml] is what I'm going to use to encrypt sensitive tokens such as passwords, public and private keys etc. Since this repository is fully open that's a must. I can't have everyone on the internet walking around with my credentials.
+
+I'm pretty sure this will go wrong a couple of times forcing me to go a key rollover but that is part of the exercise too. There are other organisations that fully open source their Puppet configuration, I don't see why I shouldn't.
+
+== Configuration
+
+Pupa is also a collection of manifests and data (managed through hiera) for my systems.
+
+Since it's my machine's configuration this will be a fairly live repository as I keep adding more configuration and expanding what I manage. As usual I'll do my best to write exemplary, idiomatic and well-maintained code which in turn will hopefully serve as examples for others on both how to solve certain problems and how to write good Puppet code.
+
+My `role::base` class is already starting to grow too big so it'll soon be time to start taking care of that and introduce some rspec tests while we're at it.
+
+=== Roles and profiles
+
+My interpretation of roles and profiles usually differs a bit from what the rest of the community thinks. I do not subscribe to the principle that a machine only has a single role with a bunch of profiles.
+
+Roles in my case are a "feature" or "facet", like a webserver, a PostgreSQL server, an IRC bouncer etc. These things can be hosted on the same machine, meaning that a machine in my case will have multiple roles.
+
+Profiles are what I use to configure modules. Lets say I use an open source SSH module but besides the configuration it provides I also want to set up some firewall rules; that will be done through a profile. Essentially it becomes a thin wrapper around a module that configures it and contains additional components and "business logic".
+
+== Time to rumble
+
+It's all live and happening right now on the https://github.com/daenney/pupa[Pupa repository on Github]. Feel free to have a look, poke around and send patches for the `bootstrap/` part of the setup.
+
+As noted in the README it's fairly likely I will reject patches to the `dist/` and `hiera/` tree as this reflects my personal configuration, not necessarily universal solutions for everyone.
