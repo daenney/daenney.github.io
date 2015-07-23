@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <title>Pupa</title>
+    <meta name="description" content="" />
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="shortcut icon" href="//daenney.github.io/themes/Casper/favicon.ico">
+
+    <link rel="stylesheet" type="text/css" href="//daenney.github.io/themes/Casper/assets/css/screen.css?v=1.0.0" />
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400" />
+
+    <link rel="canonical" href="https://daenney.github.io/2015/07/23/Pupa.html" />
+    
+    <meta property="og:site_name" content="Daenney" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Pupa" />
+    <meta property="og:description" content="Bootstrapping a modern, r10k powered, masterless, Puppet 4 setup on Debian and Ubuntu. Pupa is a toy project of mine. Essentially I decided to bring all my personal machines under full Puppet control. Inspired by how our Puppet setup works..." />
+    <meta property="og:url" content="https://daenney.github.io/2015/07/23/Pupa.html" />
+    <meta property="article:published_time" content="2015-07-22T22:00:00.000Z" />
+    <meta property="article:modified_time" content="2015-07-23T19:34:43.512Z" />
+    <meta property="article:tag" content="puppet" />
+    <meta property="article:tag" content="pupa" />
+    <meta property="article:tag" content="r10k" />
+    <meta property="article:tag" content="puppet 4" />
+    <meta property="article:tag" content="aio" />
+    
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Pupa" />
+    <meta name="twitter:description" content="Bootstrapping a modern, r10k powered, masterless, Puppet 4 setup on Debian and Ubuntu. Pupa is a toy project of mine. Essentially I decided to bring all my personal machines under full Puppet control. Inspired by how our Puppet setup works..." />
+    <meta name="twitter:url" content="https://daenney.github.io/2015/07/23/Pupa.html" />
+    
+    <script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "Article",
+    "publisher": "Daenney",
+    "author": {
+        "@type": "Person",
+        "name": "Daniele Sluijters",
+        "image": "https://avatars.githubusercontent.com/u/569574?v=3",
+        "url": "undefined/author/undefined",
+        "sameAs": ""
+    },
+    "headline": "Pupa",
+    "url": "https://daenney.github.io/2015/07/23/Pupa.html",
+    "datePublished": "2015-07-22T22:00:00.000Z",
+    "dateModified": "2015-07-23T19:34:43.512Z",
+    "keywords": "puppet,  pupa,  r10k,  puppet 4,  aio",
+    "description": "Bootstrapping a modern, r10k powered, masterless, Puppet 4 setup on Debian and Ubuntu. Pupa is a toy project of mine. Essentially I decided to bring all my personal machines under full Puppet control. Inspired by how our Puppet setup works..."
+}
+    </script>
+
+    <meta name="generator" content="Ghost ?" />
+    <link rel="alternate" type="application/rss+xml" title="Daenney" href="https://daenney.github.io/rss" />
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/default.min.css">
+</head>
+<body class="post-template tag-puppet tag-pupa tag-r10k tag-puppet-4 tag-aio">
+
+    
+
+
+<header class="main-header post-head no-cover">
+    <nav class="main-nav  clearfix">
+        <a class="back-button icon-arrow-left" href="https://daenney.github.io">Home</a>
+        <!-- <a class="subscribe-button icon-feed" href="https://daenney.github.io/rss/">Subscribe</a> -->
+    </nav>
+</header>
+
+<main class="content" role="main">
+
+    <article class="post tag-puppet tag-pupa tag-r10k tag-puppet-4 tag-aio">
+
+        <header class="post-header">
+            <h1 class="post-title">Pupa</h1>
+            <section class="post-meta">
+                <time class="post-date" datetime="2015-07-23">23 July 2015</time>  on <a href="https://daenney.github.io/tag/puppet">puppet</a>, <a href="https://daenney.github.io/tag/pupa"> pupa</a>, <a href="https://daenney.github.io/tag/r10k"> r10k</a>, <a href="https://daenney.github.io/tag/puppet-4"> puppet 4</a>, <a href="https://daenney.github.io/tag/aio"> aio</a>
+            </section>
+        </header>
+
+        <section class="post-content">
+            <div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Bootstrapping a modern, r10k powered, masterless, Puppet 4 setup on Debian and Ubuntu.</p>
+</div>
+<div class="paragraph">
+<p><a href="https://github.com/daenney/pupa">Pupa</a> is a toy project of mine. Essentially I decided to bring all my personal machines under full Puppet control. Inspired by how our Puppet setup works at my job I decided to go for a masterless setup.</p>
+</div>
+<div class="paragraph">
+<p>The problem really is to get Puppet on your machine. Once it&#8217;s there everything else is easy and as you&#8217;ll see if you look at the script I&#8217;m actually using Puppet to bootstrap part of itself.</p>
+</div>
+<div class="paragraph">
+<p>Pupa ends up being two things; a bootstrap script that will get Puppet installed and move all the necessary configuration in place, and my collection of manifests for how I want my machines to be configured.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_bootstrap_script">Bootstrap script</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><code>pupa</code> currently stands tall at about 170 lines of Bash, of which around 90 of them are boilerplate such as logging functions, setting up terminal colouring etc.</p>
+</div>
+<div class="paragraph">
+<p>Once we&#8217;ve managed to install Puppet 4 on the machine, using the <a href="https://puppetlabs.com/blog/say-hello-open-source-puppet-4">AIO packages</a> Puppetlabs provides, we then start using Puppet itself to do the rest of the work.</p>
+</div>
+<div class="paragraph">
+<p>Relying on Puppet to do the rest of the boostrapping makes <code>pupa</code> remarkably resillient. We only have to concern ourselves with making sure the first part is idempotent and once we have Puppet it takes care of that part of the problem for us. It also has the nice benefit that we can bootstrap most of our setup with simple Puppet manifests, something I am much better at writing than Bash.</p>
+</div>
+<div class="paragraph">
+<p>As it currently stands you can actually run <code>pupa</code> continuously and it won&#8217;t harm your system. It&#8217;s not just a one-off thing you can only run to initialise your machine which should you run it again will destroy all things.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_components">Components</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Pupa is made up of:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Puppet 4 and its components:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Puppet 4</p>
+</li>
+<li>
+<p>Facter 3</p>
+</li>
+<li>
+<p>Hiera 3</p>
+</li>
+<li>
+<p>Mcollective 2</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>r10k</p>
+</li>
+<li>
+<p>hiera-eyaml</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>This is fairly representative of a modern Puppet stack, with the exception that we&#8217;re missing PuppetDB. In this case that&#8217;s on purpose, I simply don&#8217;t need it. I might end up spinning a separate PuppetDB instance so that machines can upload facts and catalogs to their for other purposes but I don&#8217;t intend to rely on exported resources and such. I also take care of disabling mcollective since I won&#8217;t be doing any multi-node fanciness and don&#8217;t want to rely on middleware/brokers.</p>
+</div>
+<div class="paragraph">
+<p><a href="https://github.com/puppetlabs/r10k">r10k</a> is used to deploy the environment. Essentially it takes the modules as defined in the <code>Puppetfile</code> and all the other files from Pupa and moves them into the right place for directory environments.</p>
+</div>
+<div class="paragraph">
+<p><a href="https://github.com/TomPoulton/hiera-eyaml">hiera-eyaml</a> is what I&#8217;m going to use to encrypt sensitive tokens such as passwords, public and private keys etc. Since this repository is fully open that&#8217;s a must. I can&#8217;t have everyone on the internet walking around with my credentials.</p>
+</div>
+<div class="paragraph">
+<p>I&#8217;m pretty sure this will go wrong a couple of times forcing me to do a key rollover but that is part of the exercise too. There are other organisations that fully open source their Puppet configuration, I don&#8217;t see why I shouldn&#8217;t.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_configuration">Configuration</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Pupa is also a collection of manifests and data (managed through hiera) for my systems.</p>
+</div>
+<div class="paragraph">
+<p>Since it&#8217;s my machine&#8217;s configuration this will be a fairly live repository as I keep adding more configuration and expanding what I manage. As usual I&#8217;ll do my best to write exemplary, idiomatic and well-maintained code which in turn will hopefully serve as examples for others on both how to solve certain problems and how to write good Puppet code.</p>
+</div>
+<div class="paragraph">
+<p>My <code>role::base</code> class is already starting to grow too big so it&#8217;ll soon be time to start taking care of that and introduce some rspec tests while we&#8217;re at it.</p>
+</div>
+<div class="sect2">
+<h3 id="_roles_and_profiles">Roles and profiles</h3>
+<div class="paragraph">
+<p>My interpretation of roles and profiles usually differs a bit from what the rest of the community thinks. I do not subscribe to the principle that a machine only has a single role with a bunch of profiles.</p>
+</div>
+<div class="paragraph">
+<p>Roles in my case are a "feature" or "facet", like a webserver, a PostgreSQL server, an IRC bouncer etc. These things can be hosted on the same machine, meaning that a machine in my case will have multiple roles.</p>
+</div>
+<div class="paragraph">
+<p>Profiles are what I use to configure modules. Lets say I use an open source SSH module but besides the configuration it provides I also want to set up some firewall rules; that will be done through a profile. Essentially it becomes a thin wrapper around a module that configures it and contains additional components and "business logic".</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_time_to_rumble">Time to rumble</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>It&#8217;s all live and happening right now on the <a href="https://github.com/daenney/pupa">Pupa repository on Github</a>. Feel free to have a look, poke around and send patches for the <code>bootstrap/</code> part of the setup.</p>
+</div>
+<div class="paragraph">
+<p>As noted in the README it&#8217;s fairly likely I will reject patches to the <code>dist/</code> and <code>hiera/</code> tree as this reflects my personal configuration, not necessarily universal solutions for everyone.</p>
+</div>
+</div>
+</div>
+        </section>
+
+        <footer class="post-footer">
+
+
+            <figure class="author-image">
+                <a class="img" href="" style="background-image: url(https://avatars.githubusercontent.com/u/569574?v=3)"><span class="hidden">Daniele Sluijters's Picture</span></a>
+            </figure>
+
+            <section class="author">
+                <h4><a href="">Daniele Sluijters</a></h4>
+
+                    <p>Read <a href="">more posts</a> by this author.</p>
+                <div class="author-meta">
+                    <span class="author-location icon-location">Stockholm</span>
+                    
+                </div>
+            </section>
+
+
+            <section class="share">
+                <h4>Share this post</h4>
+                <a class="icon-twitter" href="https://twitter.com/share?text=Pupa&amp;url=https://daenney.github.io/2015/07/23/Pupa.html"
+                    onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                    <span class="hidden">Twitter</span>
+                </a>
+                <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https://daenney.github.io/2015/07/23/Pupa.html"
+                    onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                    <span class="hidden">Facebook</span>
+                </a>
+                <a class="icon-google-plus" href="https://plus.google.com/share?url=https://daenney.github.io/2015/07/23/Pupa.html"
+                   onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                    <span class="hidden">Google+</span>
+                </a>
+            </section>
+
+        </footer>
+
+
+    </article>
+
+</main>
+
+
+
+    <footer class="site-footer clearfix">
+        <section class="copyright"><a href="https://daenney.github.io">Daenney</a> &copy; 2015</section>
+        <section class="poweredby">Proudly published with <a href="http://hubpress.io">HubPress</a></section>
+    </footer>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js?v="></script> <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment-with-locales.min.js?v="></script> <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js?v="></script> 
+      <script type="text/javascript">
+        jQuery( document ).ready(function() {
+          // change date with ago
+          jQuery('ago.ago').each(function(){
+            var element = jQuery(this).parent();
+            element.html( moment(element.text()).fromNow());
+          });
+        });
+
+        hljs.initHighlightingOnLoad();      
+      </script>
+
+    <script type="text/javascript" src="//daenney.github.io/themes/Casper/assets/js/jquery.fitvids.js?v=1.0.0"></script>
+    <script type="text/javascript" src="//daenney.github.io/themes/Casper/assets/js/index.js?v=1.0.0"></script>
+
+</body>
+</html>
