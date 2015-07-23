@@ -1,4 +1,5 @@
 = Pupa
+:hp-tags: puppet, pupa, r10k, puppet 4, aio
 
 Bootstrapping a modern, r10k powered, masterless, Puppet 4 setup on Debian and Ubuntu.
 
@@ -8,11 +9,11 @@ The problem really is to get Puppet on your machine. Once it's there everything 
 
 Pupa ends up being two things; a bootstrap script that will get Puppet installed and move all the necessary configuration in place, and my collection of manifests for how I want my machines to be configured.
 
-== Bash
+== Bootstrap script
 
 `pupa` currently stands tall at about 170 lines of Bash, of which around 90 of them are boilerplate such as logging functions, setting up terminal colouring etc.
 
-Once we've managed to install Puppet 4 on the machine, using the AIO packages Puppetlabs provides, we then start using Puppet itself to do the rest of the work.
+Once we've managed to install Puppet 4 on the machine, using the https://puppetlabs.com/blog/say-hello-open-source-puppet-4[AIO packages] Puppetlabs provides, we then start using Puppet itself to do the rest of the work.
 
 Relying on Puppet to do the rest of the boostrapping makes `pupa` remarkably resillient. We only have to concern ourselves with making sure the first part is idempotent and once we have Puppet it takes care of that part of the problem for us. It also has the nice benefit that we can bootstrap most of our setup with simple Puppet manifests, something I am much better at writing than Bash.
 
