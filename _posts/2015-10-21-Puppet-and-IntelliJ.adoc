@@ -16,7 +16,7 @@ Right-click on the `modules/` directory and choose "Mark Directory As > Sources 
 
 Go into your Project settings and navigate to "Languages & Frameworks > Puppet". Change the language level from 3.X to 4 depending on what you're using. Next go into the "Environments" section and uncheck "Synchronize environment with VCS branch name". Edit the production environment and uncheck "Use default modulepath" and change the modulepath to point to the `modules/` directory inside your Puppet repository.
 
-image::https://dl.dropboxusercontent.com/content_link/rFAe9yZT1inTl97nwyKAnJwy7fOtn0Ykg1dLU6l0V2G5j1OXnuDg8VWktIxk0dku/file[IntelliJ Puppet Settings]
+image::https://www.dropbox.com/s/awgdfnesmam1eye/intellij-puppet-settings.png?raw=1[IntelliJ Puppet Settings]
 
 Save the changes and done. Now, open up any Puppet manifest file and try declaring a new APT source. Assuming you have https://forge.puppetlabs.com/puppetlabs/apt[puppetlabs/apt] installed once you start typing the first letter of a parameter a code completion box will pop up to help you out.
 
