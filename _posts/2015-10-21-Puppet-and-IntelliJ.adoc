@@ -20,4 +20,4 @@ image::https://www.dropbox.com/s/awgdfnesmam1eye/intellij-puppet-settings.png?ra
 
 Save the changes and done. Now, open up any Puppet manifest file and try declaring a new APT source. Assuming you have https://forge.puppetlabs.com/puppetlabs/apt[puppetlabs/apt] installed once you start typing the first letter of a parameter a code completion box will pop up to help you out.
 
-image::https://dl.dropboxusercontent.com/content_link/8uX9iWlE9AnwzqVghbLgSjSey7DcSqgMsbtwgH8DPTY5SNc97dwSqUaJeVLtAk0U/file[IntelliJ Puppet Completion]
+image::https://www.dropbox.com/s/ema0asxfnpjenfb/intellij-puppet-compl.png?raw=1[IntelliJ Puppet Completion]
