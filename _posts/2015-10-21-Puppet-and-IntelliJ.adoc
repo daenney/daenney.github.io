@@ -4,7 +4,7 @@
 
 Part of the fun of Puppetconf is getting to talk to so many people and learning clever new tricks from each other. I knew IntelliJ had some support for writing Puppet code but as https://twitter.com/tefields[Travis] showed me it's been greatly improved.
 
-If you're running IntelliJ you'll need to install both the Ruby and the Puppet plugins. If you're on RubyMine on the latter is needed.
+If you're running IntelliJ you'll need to install both the Ruby and the Puppet plugins. If you're on RubyMine only the latter is needed.
 
 By default the Puppet plugin handles single modules really well and gives you things like code completion and refactoring support for your classes and (defined) types. If you have dependent modules which you have declared in your fixtures file and run a `rake spec_prep` IntelliJ will even give you code completion for those too.
 
