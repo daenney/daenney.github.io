@@ -2,7 +2,7 @@
 
 :hp-tags: puppet, intellij
 
-Part of the fun of Puppetconf is getting to talk to so many people and learning clever new tricks from each other. I knew IntelliJ had some support for writing Puppet code but as Travis showed me it's been greatly improved.
+Part of the fun of Puppetconf is getting to talk to so many people and learning clever new tricks from each other. I knew IntelliJ had some support for writing Puppet code but as https://twitter.com/tefields[Travis] showed me it's been greatly improved.
 
 If you're running IntelliJ you'll need to install both the Ruby and the Puppet plugins. If you're on RubyMine on the latter is needed.
 
