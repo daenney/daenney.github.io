@@ -16,8 +16,8 @@ Right-click on the `modules/` directory and choose "Mark Directory As > Sources 
 
 Go into your Project settings and navigate to "Languages & Frameworks > Puppet". Change the language level from 3.X to 4 depending on what you're using. Next go into the "Environments" section and uncheck "Synchronize environment with VCS branch name". Edit the production environment and uncheck "Use default modulepath" and change the modulepath to point to the `modules/` directory inside your Puppet repository.
 
-image::https://photos-5.dropbox.com/t/2/AACD5vdkti5TbzhTNthHDOBo2_w7yk5Qc9qswpBDp58I0w/12/73943/png/32x32/1/1445439600/0/2/intellij-puppet-settings.png/CNfBBCABIAIgAyAFIAcoAigH/5BDqaKGZ-6dmzpfJ2PBnfBfonMVaFRLRdTCAaado9GA?size=1024x768&size_mode=2[IntelliJ Puppet Settings]
+image::https://dl.dropboxusercontent.com/content_link/rFAe9yZT1inTl97nwyKAnJwy7fOtn0Ykg1dLU6l0V2G5j1OXnuDg8VWktIxk0dku/file[IntelliJ Puppet Settings]
 
 Save the changes and done. Now, open up any Puppet manifest file and try declaring a new APT source. Assuming you have https://forge.puppetlabs.com/puppetlabs/apt[puppetlabs/apt] installed once you start typing the first letter of a parameter a code completion box will pop up to help you out.
 
-image::https://photos-5.dropbox.com/t/2/AAC2vFYGmbAQpOOh4RvPvNGw6yuV6Q_vwqB0xRG55xTbGA/12/73943/png/32x32/1/1445439600/0/2/intellij-puppet-compl.png/CNfBBCABIAIgAyAFIAcoAigH/p57IkqhTxsipIZn_Nlm1JBA_pI6V7OPp33A2Lt_PqPI?size=1024x768&size_mode=2[IntelliJ Puppet Completion]
+image::https://dl.dropboxusercontent.com/content_link/8uX9iWlE9AnwzqVghbLgSjSey7DcSqgMsbtwgH8DPTY5SNc97dwSqUaJeVLtAk0U/file[IntelliJ Puppet Completion]
