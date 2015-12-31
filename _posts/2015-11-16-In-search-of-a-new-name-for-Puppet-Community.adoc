@@ -1,6 +1,8 @@
 # In search of a new name for Puppet Community
 :hp-tags: puppet, puppet-community
 
+**update**: We've settled on the name Vox Pupuli. It's a play on the Latin "vox populi", voice of the people, but in our case ends up meaning "voice of the puppets".
+
 As quite a few of you know at PuppetConf 2014 we started a community collaboration effort on the maintenance of modules and tooling in the Puppet eco-space. In our enthusiasm we baptised it https://github.com/puppet-community[Puppet Community].
 
 ## 20/20 hindsight
