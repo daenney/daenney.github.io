@@ -16,7 +16,7 @@ ____
 
 Contrary to what most people do my key only has one UID, without an associated e-mail address.
 
-I am me and the keypair that I've generated is supposed to be used to authenticate messages as coming from me or to encrypt content for my eyes only. My e-mail address doesn't help to establish identity at all and that same key should be able to be used to authenticate/encrypt messages exchanges over Facebook, Twitter, e-mail or by telepathy. Not all of these are identifiable by an email address.
+I am me and the keypair that I've generated is supposed to be used to authenticate messages as coming from me or to encrypt content for my eyes only. My e-mail address doesn't help to establish identity at all or that that message is in any way from me. That same key should be usable to authenticate/encrypt messages exchanges over Facebook, Twitter, e-mail or by telepathy. Not all of these are identifiable by an e-mail address.
 
 == Keypair requirements
 
