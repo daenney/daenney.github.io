@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <title>PGP, one last try</title>
+    <meta name="description" content="" />
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="shortcut icon" href="//daenney.github.io/themes/Casper/favicon.ico">
+
+    <link rel="stylesheet" type="text/css" href="//daenney.github.io/themes/Casper/assets/css/screen.css?v=1.0.0" />
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400" />
+
+    <link rel="canonical" href="https://daenney.github.io/2016/01/09/PGP-one-last-try.html" />
+    
+    <meta property="og:site_name" content="Daenney" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="PGP, one last try" />
+    <meta property="og:description" content="Over the years I&amp;#8217;ve tried to use PGP multiple times. However, I&amp;#8217;ve always failed miserably at managing keys and understanding the lifecycle involved. This is evident by searching the keyservers for my name, it&amp;#8217;ll..." />
+    <meta property="og:url" content="https://daenney.github.io/2016/01/09/PGP-one-last-try.html" />
+    <meta property="article:published_time" content="2016-01-08T23:00:00.000Z" />
+    <meta property="article:modified_time" content="2016-01-09T16:06:34.002Z" />
+    <meta property="article:tag" content="pgp" />
+    <meta property="article:tag" content="gpg" />
+    <meta property="article:tag" content="security" />
+    
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="PGP, one last try" />
+    <meta name="twitter:description" content="Over the years I&amp;#8217;ve tried to use PGP multiple times. However, I&amp;#8217;ve always failed miserably at managing keys and understanding the lifecycle involved. This is evident by searching the keyservers for my name, it&amp;#8217;ll..." />
+    <meta name="twitter:url" content="https://daenney.github.io/2016/01/09/PGP-one-last-try.html" />
+    
+    <script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "Article",
+    "publisher": "Daenney",
+    "author": {
+        "@type": "Person",
+        "name": "Daniele Sluijters",
+        "image": "https://avatars.githubusercontent.com/u/569574?v=3",
+        "url": "undefined/author/undefined",
+        "sameAs": null
+    },
+    "headline": "PGP, one last try",
+    "url": "https://daenney.github.io/2016/01/09/PGP-one-last-try.html",
+    "datePublished": "2016-01-08T23:00:00.000Z",
+    "dateModified": "2016-01-09T16:06:34.002Z",
+    "keywords": "pgp,  gpg,  security",
+    "description": "Over the years I&amp;#8217;ve tried to use PGP multiple times. However, I&amp;#8217;ve always failed miserably at managing keys and understanding the lifecycle involved. This is evident by searching the keyservers for my name, it&amp;#8217;ll..."
+}
+    </script>
+
+    <meta name="generator" content="Ghost ?" />
+    <link rel="alternate" type="application/rss+xml" title="Daenney" href="https://daenney.github.io/rss" />
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/default.min.css">
+</head>
+<body class="post-template tag-pgp tag-gpg tag-security">
+
+    
+
+
+<header class="main-header post-head no-cover">
+    <nav class="main-nav  clearfix">
+        <a class="back-button icon-arrow-left" href="https://daenney.github.io">Home</a>
+        <!-- <a class="subscribe-button icon-feed" href="https://daenney.github.io/rss/">Subscribe</a> -->
+    </nav>
+</header>
+
+<main class="content" role="main">
+
+    <article class="post tag-pgp tag-gpg tag-security">
+
+        <header class="post-header">
+            <h1 class="post-title">PGP, one last try</h1>
+            <section class="post-meta">
+                <time class="post-date" datetime="2016-01-09">09 January 2016</time>  on <a href="https://daenney.github.io/tag/pgp">pgp</a>, <a href="https://daenney.github.io/tag/gpg"> gpg</a>, <a href="https://daenney.github.io/tag/security"> security</a>
+            </section>
+        </header>
+
+        <section class="post-content">
+            <div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Over the years I&#8217;ve tried to use PGP multiple times. However, I&#8217;ve always failed miserably at managing keys and understanding the lifecycle involved. This is evident by searching the keyservers for my name, it&#8217;ll turn up a few rather idiotic and dubiously keys. None of them should be used except for one, <a href="https://daenney.github.io/gpg/">0x18D40820FA0EE03C</a>.</p>
+</div>
+<div class="paragraph">
+<p>These failures with PGP are in part my fault for not correctly understanding what I was doing and part because of the horrendous UX of the gpg tools and the documentation that comes with it. A lot of tutorials, especially at the time, totally ommitted things like store a revocation certificate, store/backup your master key offline etc. while happily encouraging you to just push your key out.</p>
+</div>
+<div class="paragraph">
+<p>After spending a few hours every day of the week reading up on some resources around PGP and a number of tutorials around generating a good and secure key pairs I decided to give this one last try. If I can&#8217;t make it work this time, I&#8217;m done.</p>
+</div>
+<div class="paragraph">
+<p>I am taking a slightly different approach to PGP than usual, which resulted in the lovely <a href="https://twitter.com/hirojin">igalic</a> commenting on this by saying:</p>
+</div>
+<div class="quoteblock">
+<blockquote>
+<div class="paragraph">
+<p>why do you /always/ have to be difficult? &gt;_&gt;</p>
+</div>
+</blockquote>
+<div class="attribution">
+&#8212; Igor Galić
+</div>
+</div>
+<div class="paragraph">
+<p>Contrary to what most people do my key only has one UID, without an associated e-mail address.</p>
+</div>
+<div class="paragraph">
+<p>I am me and the keypair that I&#8217;ve generated is supposed to be used to authenticate messages as coming from me or to encrypt content for my eyes only. My e-mail address is not part of that identity at all and that same key should be able to be used to authenticate/encrypt messages exchanges over Facebook, Twitter, e-mail or by telepathy. Not all of these are identifiable by an email address.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_keypair_requirements">Keypair requirements</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>In order to not run into the same trouble as before I decided that:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>My master key will be generated and stored on an encrypted USB drive.</p>
+</li>
+<li>
+<p>My master key will never be copied off that drive (though at times will be loaded into memeory if I have to sign another key).</p>
+</li>
+<li>
+<p>My master key will only ever be able to certify other keys.</p>
+</li>
+<li>
+<p>My master key will expire in 5 years because I really hope that by then we have a better solution. If not I can always extend it.</p>
+</li>
+<li>
+<p>I&#8217;ll have three separate subkeys, for authentication, encryption and signing.</p>
+</li>
+<li>
+<p>These three subkeys will be generated and stored on a OpenPGP Card compatible device and will never leave that device.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>For the device that generates and stores my subkeys I decided to go with a <a href="https://www.yubico.com/products/yubikey-hardware/yubikey-neo/">Yubikey NEO</a>. Besides OpenPGP it also supports FIDO U2F and can function as an OTP generator. If you had to buy one now I would suggest buying a <a href="https://www.yubico.com/products/yubikey-hardware/yubikey4/">Yubikey 4</a> instead as that one allows you to generate 4096 bit RSA subkeys, the NEO is limited to 2048.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_keypair_generation_and_storage">Keypair generation and storage</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>There is a lot of content avaiable on how to do this and I&#8217;m not going to repeat it here. Read <a href="http://spin.atomicobject.com/2013/09/25/gpg-gnu-privacy-guard/">Mike English</a>'s excellent set of blogposts on the topic and <a href="https://www.esev.com/blog/post/2015-01-pgp-ssh-key-on-yubikey-neo/">this one by Eric Severance</a>.</p>
+</div>
+<div class="paragraph">
+<p>I adjusted them a bit to fit my needs in the sense that:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Set up some <a href="https://github.com/daenney/gpg/blob/gh-pages/gpg.conf">sane settings</a> in <code>gpg.conf</code>.</p>
+</li>
+<li>
+<p>Generated the master key myself (so not on the Yubikey) and stored directly on an encrypted USB drive (set <code>GNUPGHOME</code> environment variable to point to your desired location when generating it and don&#8217;t forget to copy a sane <code>gpg.conf</code> to that location too) .</p>
+</li>
+<li>
+<p>Generated a revocation key and distributed a few copies of it so that I can always revoke the key should it be compromised or if I lose access to it.</p>
+</li>
+<li>
+<p>Public key is stored on <a href="https://github.com/daenney/gpg">Github</a> and hosted through <a href="https://daenney.github.io/gpg/">Github Pages</a>.</p>
+</li>
+<li>
+<p>Set <code>keyserver</code> on the Yubikey to point to the location of my key on the web and then imported it with a <code>fetch</code>.</p>
+</li>
+<li>
+<p>Generated the subkeys on the device itself (<code>addcardkey</code>).</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_final_words">Final words</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>It took me a lot of time in reading and trying this all out, combining different blogposts to reach the solution I deemed secure enough for my needs and still usable. I did this process a few times over and probably still fucked up somewhere.</p>
+</div>
+<div class="paragraph">
+<p>The key with id 0x18D40820FA0EE03C is stored on <a href="https://github.com/daenney/gpg">Github</a> and leveraging Github Pages is available on <a href="https://daenney.github.io/gpg/" class="bare">https://daenney.github.io/gpg/</a>. It has also been pushed out to the GnuPG/sks-keyserver pool of servers. If you sign my key and push it back out do let me know (you really shouldn&#8217;t sign a key blindly anyway) so I can export it and update the copy on Github.</p>
+</div>
+</div>
+</div>
+        </section>
+
+        <footer class="post-footer">
+
+
+            <figure class="author-image">
+                <a class="img" href="" style="background-image: url(https://avatars.githubusercontent.com/u/569574?v=3)"><span class="hidden">Daniele Sluijters's Picture</span></a>
+            </figure>
+
+            <section class="author">
+                <h4><a href="">Daniele Sluijters</a></h4>
+
+                    <p>Read <a href="">more posts</a> by this author.</p>
+                <div class="author-meta">
+                    <span class="author-location icon-location">Stockholm</span>
+                    
+                </div>
+            </section>
+
+
+            <section class="share">
+                <h4>Share this post</h4>
+                <a class="icon-twitter" href="https://twitter.com/share?text=PGP%2C%20one%20last%20try&amp;url=https://daenney.github.io/2016/01/09/PGP-one-last-try.html"
+                    onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                    <span class="hidden">Twitter</span>
+                </a>
+                <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https://daenney.github.io/2016/01/09/PGP-one-last-try.html"
+                    onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                    <span class="hidden">Facebook</span>
+                </a>
+                <a class="icon-google-plus" href="https://plus.google.com/share?url=https://daenney.github.io/2016/01/09/PGP-one-last-try.html"
+                   onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                    <span class="hidden">Google+</span>
+                </a>
+            </section>
+
+        </footer>
+
+
+    </article>
+
+</main>
+
+
+
+    <footer class="site-footer clearfix">
+        <section class="copyright"><a href="https://daenney.github.io">Daenney</a> &copy; 2016</section>
+        <section class="poweredby">Proudly published with <a href="http://hubpress.io">HubPress</a></section>
+    </footer>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js?v="></script> <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment-with-locales.min.js?v="></script> <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js?v="></script> 
+      <script type="text/javascript">
+        jQuery( document ).ready(function() {
+          // change date with ago
+          jQuery('ago.ago').each(function(){
+            var element = jQuery(this).parent();
+            element.html( moment(element.text()).fromNow());
+          });
+        });
+
+        hljs.initHighlightingOnLoad();      
+      </script>
+
+    <script type="text/javascript" src="//daenney.github.io/themes/Casper/assets/js/jquery.fitvids.js?v=1.0.0"></script>
+    <script type="text/javascript" src="//daenney.github.io/themes/Casper/assets/js/index.js?v=1.0.0"></script>
+
+</body>
+</html>
