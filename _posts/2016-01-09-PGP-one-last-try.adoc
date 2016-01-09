@@ -29,7 +29,7 @@ In order to not run into the same trouble as before I decided that:
 * I'll have three separate subkeys, for authentication, encryption and signing.
 * These three subkeys will be generated and stored on an OpenPGP Card compatible device and will never leave that device.
 
-For the device that generates and stores my subkeys I decided to go with a https://www.yubico.com/products/yubikey-hardware/yubikey-neo/[Yubikey NEO]. Besides OpenPGP it also supports FIDO U2F and can function as an OTP generator. If you had to buy one now I would suggest buying a https://www.yubico.com/products/yubikey-hardware/yubikey4/[Yubikey 4] instead as that one allows you to generate 4096 bit RSA subkeys, the NEO is limited to 2048.
+For the device that generates and stores my subkeys I decided to go with a https://www.yubico.com/products/yubikey-hardware/yubikey-neo/[Yubikey NEO] that I happened to have. Besides OpenPGP it also supports FIDO U2F and can function as an OTP generator. If you had to buy one now I would suggest buying a https://www.yubico.com/products/yubikey-hardware/yubikey4/[Yubikey 4] instead as that one allows you to generate 4096 bit RSA subkeys, the NEO is limited to 2048.
 
 == Keypair generation and storage
 
