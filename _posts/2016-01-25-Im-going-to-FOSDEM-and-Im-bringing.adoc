@@ -18,7 +18,7 @@ If that doesn't sound all that practical there's a few things you can do.
 . SSH only through a bastion you've connected to before and have verified its fingerprint. Do not disable `StrictHostKeyChecking` for that host.
 . Shut off any wireless you don't really really abso-total-utely need (Bluetooth comes to mind).
 
-Streisand is nice enough to also spin up an nginx accessible over TLS/SSL only with all the necessary instructions and a mirror of the binaries so you can fetch them directly from your own machine. It also configures our machine so that jsut about nothing is logged.
+Streisand is nice enough to also spin up an nginx accessible over TLS/SSL only with all the necessary instructions and a mirror of the binaries so you can fetch them directly from your own machine. It also configures your machine so that just about nothing is logged.
 
 The L2TP/IPSec VPN is very useful for mobile devices. Just about any smartphone supports it as a VPN option allowing you to throw all traffic over it. OpenVPN is also a good option for Android and iOS.
 
