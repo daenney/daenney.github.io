@@ -26,5 +26,5 @@ SOCKS5 proxies are great if you only want to hide/proxy/unblock certain traffic.
 
 As a last note, since it's possible to securely communicate over WiFi + one of the VPN solutions, you can disable cellular capabilities on your phone entirely or at least the data portion of it.
 
-Last but not least, no matter how secure you think you are, limit your usage. Do your Twitter and Facebook if you want to, check your email once you're properly secured, SSH to your bastion and grab your IRC session, but avoid doing things with online banking, government services etc.
+Last but not least, no matter how secure you think you are, limit your usage. Do your Twitter and Facebook if you want to or check your email once VPN is up, SSH to your bastion and grab your IRC session, but avoid doing things with online banking, government services etc.
 
