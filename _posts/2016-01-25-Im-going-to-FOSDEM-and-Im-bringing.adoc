@@ -1,0 +1,26 @@
+= I'm going to FOSDEM and I'm bringing
+:hp-tags: foss, fosdem, security, streisand, vpn, openvpn, ipsec, socks, socks5
+
+FOSDEM is a wonderful event. But as with any event with geeks people will try to sniff your traffic, mess with GSM, grab your credentials and what not.
+
+The best way to stay safe? Don't bring electronics with you or have them in flight mode (laptop included). No Bluetooth, no WiFi, no GSM/3G/tethering, nothing.
+
+If that doesn't sound all that practical there's a few things you can do.
+
+. Spin up a https://github.com/jlund/streisand[Streisand] server so you can VPN all the things. It comes equipped with:
+.. L2TP/IPSec VPN
+.. OpenVPN on regular port and 443
+.. OpenVPN wrapped in TLS/SSL over port 993 (through stunnel, using the imaps port, great to avoid deep-packet inspection)
+.. Shadowsocks (SOCKS5, encrypted, with an easy GUI)
+.. SSH (SOCKS5 proxy) on port 22 and 443
+.. Tor bridge with Obfsproxy
+.. dnsmasq (to do all your DNS queries for you)
+. SSH only through a bastion you've connected to before and have verified its fingerprint. Do not disable `StrictHostKeyChecking` for that host.
+. Shut off any wireless you don't really really abso-total-utely need (Bluetooth comes to mind).
+
+Streisand is nice enough to also spin up an nginx accessible over TLS/SSL only with all the necessary instructions and a mirror of the binaries so you can fetch them directly from your own machine. It also configures our machine so that jsut about nothing is logged.
+
+The L2TP/IPSec VPN is very useful for mobile devices. Just about any smartphone supports it as a VPN option allowing you to throw all traffic over it. OpenVPN is also a good option for Android and iOS.
+
+SOCKS5 proxies are great if you only want to hide/proxy/unblock certain traffic. Shadowsocks has the added option of being able to work as a transparent proxy so you don't have to configure every application individually to use it.
+
