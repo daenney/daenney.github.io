@@ -24,7 +24,7 @@ The L2TP/IPSec VPN is very useful for mobile devices. Just about any smartphone 
 
 SOCKS5 proxies are great if you only want to hide/proxy/unblock certain traffic. Shadowsocks has the added option of being able to work as a transparent proxy so you don't have to configure every application individually to use it.
 
-As a last note, since it's possible to securely communicate over WiFi + one of the VPN solutions, you can disable cellular capabilities on your phone entirely or at least the data portion of it.
+As a last note, since it's possible to securely communicate over WiFi + one of the VPN solutions, you can disable cellular capabilities on your phone entirely or at least the data portion of it (if you don't want to accumulate a huge roaming bill).
 
 Last but not least, no matter how secure you think you are, limit your usage. Do your Twitter and Facebook if you want to or check your email once VPN is up, SSH to your bastion and grab your IRC session, but avoid doing things with online banking, government services etc.
 
