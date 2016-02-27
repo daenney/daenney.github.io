@@ -1,0 +1,24 @@
+# Site settings
+title: Daenney
+author: Daniele Sluijters
+description: >
+  Working on the future while maintaining the past.
+baseurl: ""
+url: "https://daenney.github.io"
+github_username:  daenney
+twitter_username: daenney
+
+# Build settings
+markdown: kramdown
+encoding: utf-8
+timezone: Etc/UTC
+permalink: /:year/:month/:day/:title.html
+kramdown:
+  hard_wrap: false
+  input: GFM
+  syntax_highlighter: rouge
+gems: [jekyll-paginate]
+logo: false
+paginate: 10
+
+exclude: ["Gemfile", "Gemfile.lock", "LICENSE", "CNAME", "README.md", "vendor"]

@@ -1,221 +1,80 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+---
+layout: default
+title: Home
+cover: false
+---
 
-    <title>Daenney</title>
-    <meta name="description" content="Working on the future while maintaining the past." />
-
-    <meta name="HandheldFriendly" content="True" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <link rel="shortcut icon" href="//daenney.github.io/themes/Casper/favicon.ico">
-
-    <link rel="stylesheet" type="text/css" href="//daenney.github.io/themes/Casper/assets/css/screen.css?v=1.0.0" />
-    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400" />
-
-    <link rel="canonical" href="https://daenney.github.io" />
-    <link rel="next" href="https://daenney.github.io/page/2/" />
-    <meta name="generator" content="Ghost ?" />
-    <link rel="alternate" type="application/rss+xml" title="Daenney" href="https://daenney.github.io/rss" />
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/default.min.css">
-</head>
-<body class="home-template">
-
-    
-<header class="main-header " style="background-image: url(https://raw.githubusercontent.com/daenney/daenney.github.io/master/images/cover.jpg)">
+<header class="main-header" style="background-image: url({{ site.url }}/assets/images/cover.jpg)">
     <nav class="main-nav overlay clearfix">
-        
-        <!-- <a class="subscribe-button icon-feed" href="https://daenney.github.io/rss/">Subscribe</a> -->
+            {% if page.logo %}
+                <a class="blog-logo" href="{{ site.url }}">
+                    <img src="{{ page.logo }}" alt="Blog Logo" />
+                </a>
+            {% endif %}
+        <a class="subscribe-button" href="{{ site.url }}/feed.xml">Subscribe</a>
     </nav>
     <div class="vertical">
         <div class="main-header-content inner">
-            <h1 class="page-title">Daenney</h1>
-            <h2 class="page-description">Working on the future while maintaining the past.</h2>
+            <h1 class="page-title">{{ site.name }}</h1>
+            <h2 class="page-description">
+                {% if site.description %} {{ site.description }}. {% endif %}
+                {% if page.about %} <a href='{{ site.url }}{{ page.about }}'> About me </a> {% endif %}
+            </h2>
         </div>
     </div>
     <a class="scroll-down icon-arrow-left" href="#content" data-offset="-45"><span class="hidden">Scroll Down</span></a>
 </header>
 
+
 <main id="content" class="content" role="main">
 
+
     <div class="extra-pagination inner">
-        <nav class="pagination" role="navigation">
-        <span class="page-number">Page 1 of 2</span>
-            <a class="older-posts" href="https://daenney.github.io/page/2/">Older Posts &rarr;</a>
-    </nav>
+        {% include pagination.html %}
     </div>
-    
-    <article class="post tag-foss tag-fosdem tag-security tag-streisand tag-vpn tag-openvpn tag-ipsec tag-socks tag-socks5">
+
+    {% for post in paginator.posts %}
+
+    <article class="post">
         <header class="post-header">
-            <h2 class="post-title"><a href="https://daenney.github.io/2016/01/25/Im-going-to-FOSDEM-and-Im-bringing.html">I&#x27;m going to FOSDEM and I&#x27;m bringing</a></h2>
+            <h2 class="post-title"><a href="{{ post.url }}">{{ post.title }}</a></h2>
         </header>
         <section class="post-excerpt">
-            <p>FOSDEM is a wonderful event. But as with any event with geeks people will try to sniff your traffic, mess with GSM, grab your credentials and <a class="read-more" href="https://daenney.github.io/2016/01/25/Im-going-to-FOSDEM-and-Im-bringing.html">&raquo;</a></p>
+            {{ post.excerpt }} <a class="read-more" href="{{ post.url }}">&raquo;</a>
         </section>
         <footer class="post-meta">
-            
-            
-             on <a href="https://daenney.github.io/tag/foss">foss</a>, <a href="https://daenney.github.io/tag/fosdem"> fosdem</a>, <a href="https://daenney.github.io/tag/security"> security</a>, <a href="https://daenney.github.io/tag/streisand"> streisand</a>, <a href="https://daenney.github.io/tag/vpn"> vpn</a>, <a href="https://daenney.github.io/tag/openvpn"> openvpn</a>, <a href="https://daenney.github.io/tag/ipsec"> ipsec</a>, <a href="https://daenney.github.io/tag/socks"> socks</a>, <a href="https://daenney.github.io/tag/socks5"> socks5</a>
-            <time class="post-date" datetime="2016-01-25">25 January 2016</time>
+            {% if site.author %}
+                <img class="author-thumb" src="/assets/images/profile.png" alt="Author's profile picture" nopin="nopin" />
+                {{ site.author }}
+            {% endif %}
+            {% if post.categories.size > 0 %}
+                {{ post.categories | array_to_sentence_string | prepend: 'on ' }}
+            {% endif %}
+            <time class="post-date" datetime="{{ post.date | date:"%Y-%m-%d" }}">
+                {{ post.date | date_to_string }}
+            </time>
         </footer>
     </article>
-    <article class="post tag-pgp tag-gpg tag-security">
-        <header class="post-header">
-            <h2 class="post-title"><a href="https://daenney.github.io/2016/01/09/PGP-one-last-try.html">PGP, one last try</a></h2>
-        </header>
-        <section class="post-excerpt">
-            <p>Over the years I&#8217;ve tried to use PGP multiple times. However, I&#8217;ve always failed miserably at managing keys and understanding the lifecycle <a class="read-more" href="https://daenney.github.io/2016/01/09/PGP-one-last-try.html">&raquo;</a></p>
-        </section>
-        <footer class="post-meta">
-            
-            
-             on <a href="https://daenney.github.io/tag/pgp">pgp</a>, <a href="https://daenney.github.io/tag/gpg"> gpg</a>, <a href="https://daenney.github.io/tag/security"> security</a>
-            <time class="post-date" datetime="2016-01-09">09 January 2016</time>
-        </footer>
-    </article>
-    <article class="post tag-puppet tag-puppet-community">
-        <header class="post-header">
-            <h2 class="post-title"><a href="https://daenney.github.io/2015/11/16/In-search-of-a-new-name-for-Puppet-Community.html">In search of a new name for Puppet Community</a></h2>
-        </header>
-        <section class="post-excerpt">
-            <p>update: We&#8217;ve settled on the name Vox Pupuli. It&#8217;s a play on the Latin "vox populi", voice of the people, but in <a class="read-more" href="https://daenney.github.io/2015/11/16/In-search-of-a-new-name-for-Puppet-Community.html">&raquo;</a></p>
-        </section>
-        <footer class="post-meta">
-            
-            
-             on <a href="https://daenney.github.io/tag/puppet">puppet</a>, <a href="https://daenney.github.io/tag/puppet-community"> puppet-community</a>
-            <time class="post-date" datetime="2015-11-16">16 November 2015</time>
-        </footer>
-    </article>
-    <article class="post tag-puppet tag-intellij">
-        <header class="post-header">
-            <h2 class="post-title"><a href="https://daenney.github.io/2015/10/21/Puppet-and-IntelliJ.html">Puppet and IntelliJ</a></h2>
-        </header>
-        <section class="post-excerpt">
-            <p>Part of the fun of Puppetconf is getting to talk to so many people and learning clever new tricks from each other. I knew IntelliJ had <a class="read-more" href="https://daenney.github.io/2015/10/21/Puppet-and-IntelliJ.html">&raquo;</a></p>
-        </section>
-        <footer class="post-meta">
-            
-            
-             on <a href="https://daenney.github.io/tag/puppet">puppet</a>, <a href="https://daenney.github.io/tag/intellij"> intellij</a>
-            <time class="post-date" datetime="2015-10-21">21 October 2015</time>
-        </footer>
-    </article>
-    <article class="post tag-lgbtq">
-        <header class="post-header">
-            <h2 class="post-title"><a href="https://daenney.github.io/2015/08/11/Saying-they.html">Saying &quot;they&quot;</a></h2>
-        </header>
-        <section class="post-excerpt">
-            <p>Based on a remark of a friend about preconceptions we have with regard to gender I started looking more carefully at how I use gender prononus. <a class="read-more" href="https://daenney.github.io/2015/08/11/Saying-they.html">&raquo;</a></p>
-        </section>
-        <footer class="post-meta">
-            
-            
-             on <a href="https://daenney.github.io/tag/lgbtq">lgbtq</a>
-            <time class="post-date" datetime="2015-08-11">11 August 2015</time>
-        </footer>
-    </article>
-    <article class="post tag-gay tag-lgbtq tag-pride">
-        <header class="post-header">
-            <h2 class="post-title"><a href="https://daenney.github.io/2015/08/06/Why-I-care-about-Pride.html">Why I care about Pride</a></h2>
-        </header>
-        <section class="post-excerpt">
-            <p>If you&#8217;re following me through social media it won&#8217;t have escaped your attention that my avatar turned rainbow and there was a <a class="read-more" href="https://daenney.github.io/2015/08/06/Why-I-care-about-Pride.html">&raquo;</a></p>
-        </section>
-        <footer class="post-meta">
-            
-            
-             on <a href="https://daenney.github.io/tag/gay">gay</a>, <a href="https://daenney.github.io/tag/lgbtq"> lgbtq</a>, <a href="https://daenney.github.io/tag/pride"> pride</a>
-            <time class="post-date" datetime="2015-08-06">06 August 2015</time>
-        </footer>
-    </article>
-    <article class="post tag-puppet tag-pupa tag-r10k tag-puppet-4 tag-aio">
-        <header class="post-header">
-            <h2 class="post-title"><a href="https://daenney.github.io/2015/07/23/Pupa.html">Pupa</a></h2>
-        </header>
-        <section class="post-excerpt">
-            <p>Bootstrapping a modern, r10k powered, masterless, Puppet 4 setup on Debian and Ubuntu. Pupa is a toy project of mine. Essentially I decided to bring all <a class="read-more" href="https://daenney.github.io/2015/07/23/Pupa.html">&raquo;</a></p>
-        </section>
-        <footer class="post-meta">
-            
-            
-             on <a href="https://daenney.github.io/tag/puppet">puppet</a>, <a href="https://daenney.github.io/tag/pupa"> pupa</a>, <a href="https://daenney.github.io/tag/r10k"> r10k</a>, <a href="https://daenney.github.io/tag/puppet-4"> puppet 4</a>, <a href="https://daenney.github.io/tag/aio"> aio</a>
-            <time class="post-date" datetime="2015-07-23">23 July 2015</time>
-        </footer>
-    </article>
-    <article class="post tag-eurovision tag-lgbtq">
-        <header class="post-header">
-            <h2 class="post-title"><a href="https://daenney.github.io/2015/05/24/Eurovision-2015.html">Eurovision 2015</a></h2>
-        </header>
-        <section class="post-excerpt">
-            <p>Last night Europe went to war. No the Germans didn&#8217;t start it, we were just having a huge music contest followed by some political <a class="read-more" href="https://daenney.github.io/2015/05/24/Eurovision-2015.html">&raquo;</a></p>
-        </section>
-        <footer class="post-meta">
-            
-            
-             on <a href="https://daenney.github.io/tag/eurovision">eurovision</a>, <a href="https://daenney.github.io/tag/lgbtq"> lgbtq</a>
-            <time class="post-date" datetime="2015-05-24">24 May 2015</time>
-        </footer>
-    </article>
-    <article class="post tag-puppet tag-pypuppetdb tag-puppetboard tag-community">
-        <header class="post-header">
-            <h2 class="post-title"><a href="https://daenney.github.io/2015/04/20/Open-source-identity-and-abandonment-issues.html">Open source identity and abandonment issues</a></h2>
-        </header>
-        <section class="post-excerpt">
-            <p>Today I made one of the hardest decisions I&#8217;ve made in a while. I decided to give up maintainership of two projects that I <a class="read-more" href="https://daenney.github.io/2015/04/20/Open-source-identity-and-abandonment-issues.html">&raquo;</a></p>
-        </section>
-        <footer class="post-meta">
-            
-            
-             on <a href="https://daenney.github.io/tag/puppet">puppet</a>, <a href="https://daenney.github.io/tag/pypuppetdb"> pypuppetdb</a>, <a href="https://daenney.github.io/tag/puppetboard"> puppetboard</a>, <a href="https://daenney.github.io/tag/community"> community</a>
-            <time class="post-date" datetime="2015-04-20">20 April 2015</time>
-        </footer>
-    </article>
-    <article class="post tag-gay tag-lgbtq tag-tech tag-technology">
-        <header class="post-header">
-            <h2 class="post-title"><a href="https://daenney.github.io/2015/03/19/Invisibility.html">(In)visibility</a></h2>
-        </header>
-        <section class="post-excerpt">
-            <p>After my post on LGBTQ in tech a lot of people reached out to me, thanking me for the post, with a lot of kind words <a class="read-more" href="https://daenney.github.io/2015/03/19/Invisibility.html">&raquo;</a></p>
-        </section>
-        <footer class="post-meta">
-            
-            
-             on <a href="https://daenney.github.io/tag/gay">gay</a>, <a href="https://daenney.github.io/tag/lgbtq"> lgbtq</a>, <a href="https://daenney.github.io/tag/tech"> tech</a>, <a href="https://daenney.github.io/tag/technology"> technology</a>
-            <time class="post-date" datetime="2015-03-19">19 March 2015</time>
-        </footer>
-    </article>
-    
-    <nav class="pagination" role="navigation">
-        <span class="page-number">Page 1 of 2</span>
-            <a class="older-posts" href="https://daenney.github.io/page/2/">Older Posts &rarr;</a>
-    </nav>
+
+    <!-- Capser below -->
+<!--     <article class="{{post_class}}">
+    <header class="post-header">
+        <h2 class="post-title"><a href="{{url}}">{{{title}}}</a></h2>
+    </header>
+    <section class="post-excerpt">
+        <p>{{excerpt words="26"}} <a class="read-more" href="{{url}}">&raquo;</a></p>
+    </section>
+    <footer class="post-meta">
+        {{#if author.image}}<img class="author-thumb" src="{{author.image}}" alt="Author image" nopin="nopin" />{{/if}}
+        {{author}}
+        {{tags prefix=" on "}}
+        <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMMM YYYY"}}</time>
+    </footer>
+    </article> -->
+    <!--  -->
+
+    {% endfor %}
+
+    {% include pagination.html %}
 
 </main>
-
-
-    <footer class="site-footer clearfix">
-        <section class="copyright"><a href="https://daenney.github.io">Daenney</a> &copy; 2016</section>
-        <section class="poweredby">Proudly published with <a href="http://hubpress.io">HubPress</a></section>
-    </footer>
-
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js?v="></script> <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment-with-locales.min.js?v="></script> <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js?v="></script> 
-      <script type="text/javascript">
-        jQuery( document ).ready(function() {
-          // change date with ago
-          jQuery('ago.ago').each(function(){
-            var element = jQuery(this).parent();
-            element.html( moment(element.text()).fromNow());
-          });
-        });
-
-        hljs.initHighlightingOnLoad();      
-      </script>
-
-    <script type="text/javascript" src="//daenney.github.io/themes/Casper/assets/js/jquery.fitvids.js?v=1.0.0"></script>
-    <script type="text/javascript" src="//daenney.github.io/themes/Casper/assets/js/index.js?v=1.0.0"></script>
-
-</body>
-</html>
