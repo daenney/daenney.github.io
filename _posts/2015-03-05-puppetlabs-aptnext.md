@@ -108,11 +108,9 @@ behaviour.
 ## Status
 
 We're not done, yet. Most of the things I've described here are
-reflected on the
-[next branch](https://github.com/puppetlabs/puppetlabs-apt/tree/next).
-We're also hard at work to getting the documentation back into order,
-write the necessary examples and provide a migration guide for when we
-release 2.0.0.
+reflected on the *next* branch. We're also hard at work to getting the
+documentation back into order, write the necessary examples and provide
+a migration guide for when we release 2.0.0.
 
 We also have plans to release a 3.0.0 version once Puppet 4 has seen
 some uptake leveraging the new Type system to do parameter validation

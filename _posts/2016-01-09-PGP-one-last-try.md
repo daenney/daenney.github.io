@@ -75,8 +75,8 @@ choice either.
 There is a lot of content avaiable on how to do this and I'm not going
 to repeat it here. Read
 [Mike English](http://spin.atomicobject.com/2013/09/25/gpg-gnu-privacy-guard/)'s
-excellent set of blogposts on the topic and [this one by Eric Severance](htt
-ps://www.esev.com/blog/post/2015-01-pgp-ssh-key-on-yubikey-neo/).
+excellent set of blogposts on the topic and
+[this one by Eric Severance](https://www.esev.com/blog/post/2015-01-pgp-ssh-key-on-yubikey-neo/).
 
 I adjusted them a bit to fit my needs in the sense that:
 

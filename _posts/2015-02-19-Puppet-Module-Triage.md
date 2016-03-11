@@ -19,9 +19,8 @@ so feel free to read up on those too.
 
 Two major things happened:
 
--   [hulk smash](https://github.com/puppetlabs/puppetlabs-apt/pull/424)
-    got merged into
-    [apt/next](https://github.com/puppetlabs/puppetlabs-apt/tree/next)
--   a huge rework/refactor PR on
+-   [Hulk smash](https://github.com/puppetlabs/puppetlabs-apt/pull/424)
+    got merged into *apt/next*.
+-   A huge rework/refactor PR on
     [nodejs](https://github.com/puppetlabs/puppetlabs-nodejs/pull/103#issuecomment-75107863)
-    landed
+    landed.
