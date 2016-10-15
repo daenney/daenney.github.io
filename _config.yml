@@ -1,8 +1,8 @@
 # Site settings
 title: Daenney
 author: Daniele Sluijters
-description: >
-  Working on the future while maintaining the past.
+description: Working on the future while maintaining the past.
+meta_description: Daenney's blog and ramblings
 baseurl: ""
 url: "https://daenney.github.io"
 github_username:  daenney
