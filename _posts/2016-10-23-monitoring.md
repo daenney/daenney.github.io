@@ -34,8 +34,9 @@ Safe for needing to backup the Prometheus data I can spin this stack up
 anywhere else too just as quickly and get going, which is really nice.
 
 If you want to take a look, you can find the config and the
-`docker-compose.yml` file right here: https://github.com/daenney/monitoring.
-And yes, I still use Puppet to manage that.
+`docker-compose.yml` file right [here](https://github.com/daenney/monitoring).
+And yes, I still use Puppet to manage those few configuration files and
+ensure everything ends up in the right place.
 
 One great thing I ran into... my stupid home router doesn't do SNMP very
 well. Once it gets busy with more network traffic it doesn't only stop
