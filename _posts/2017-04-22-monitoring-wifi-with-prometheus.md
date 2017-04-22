@@ -221,6 +221,12 @@ from the Linux kernel, has its components written in Go. With proper APIs
 and everything so you can automate it all. Seems like I have something to do
 during my next vacation :).
 
+### Update
+
+I've [submitted a PR to the SNMP Exporter][pr-snmp] to add a `ddwrt` module
+that knows about all the OIDs DD-WRT exposes. Including a few more esoteric
+ones. Please comment/sent patches if you notice something's wrong.
+
 [owrtexp]: https://github.com/jschornick/openwrt_exporter
 [di-mipsel]: http://ftp.se.debian.org/debian/dists/stable/main/installer-mipsel/current/images/malta/netboot
 [build-mips]: https://github.com/prometheus/node_exporter/commit/bb9d4ade0b677d7f84deec9c354e372edba6a2ec
@@ -231,3 +237,4 @@ during my next vacation :).
 [ddwrt-go]: https://github.com/CodeMonk/dd-wrt-go
 [ddwrt-snmp]: https://www.dd-wrt.com/wiki/index.php/SNMP#Known_OID.C2.B4s_via_SNMP
 [prom-snmp]: https://github.com/prometheus/snmp_exporter
+[pr-snmp]: https://github.com/prometheus/snmp_exporter/pull/147
