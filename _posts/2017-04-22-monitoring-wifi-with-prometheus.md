@@ -150,7 +150,7 @@ all would've been over with. But where's the fun in that?
 Onwards to the next adventure, getting DD-WRT to run. When looking through
 the DD-WRT site I could only find really old builds but it turns out that
 what you should just get is the latest beta from their FTP. A quick browse
-through the forums showed that others had the latest version running in the
+through the forums showed that others had the latest version running on the
 AC66U without issue and that it came with a 3.10 kernel! After a few hours
 of frustration (it turns out you need to flash 26339 first otherwise your
 5GHz will be broken) I finally had everything running.
@@ -164,7 +164,7 @@ actually breaks a lot of things including other software available in Entware.
 ## OK, now what
 
 At this point, I'm kinda done. I can't get it to run on the Merlin firmware
-b/c the code from ASUS it's built on lacks `FD_CLOEXEC` and `SD_CLOEXEC`
+b/c the code from ASUS it's built on lacks `FD_CLOEXEC` and `SOCK_CLOEXEC`
 support. I could backport support for it but it's unlikely a patch will get
 accepted since I'm probably the only person in the world who cares about
 being able to run Go code on the AC66U.
