@@ -227,6 +227,12 @@ I've [submitted a PR to the SNMP Exporter][pr-snmp] to add a `ddwrt` module
 that knows about all the OIDs DD-WRT exposes. Including a few more esoteric
 ones. Please comment/sent patches if you notice something's wrong.
 
+There's now also a [separate repository that I maintain][ddwrt-snmpexp] with
+an `snmp.yml` for DD-WRT machines. It includes support for the OID entries
+that the `wl_snmpd.sh` script running on DD-WRT hooks into an obscure part
+of the tree. Until I've had time to write an actual MIB for it I can't add
+support for it in the Prometheus SNMP exporter directly.
+
 [owrtexp]: https://github.com/jschornick/openwrt_exporter
 [di-mipsel]: http://ftp.se.debian.org/debian/dists/stable/main/installer-mipsel/current/images/malta/netboot
 [build-mips]: https://github.com/prometheus/node_exporter/commit/bb9d4ade0b677d7f84deec9c354e372edba6a2ec
@@ -238,3 +244,4 @@ ones. Please comment/sent patches if you notice something's wrong.
 [ddwrt-snmp]: https://www.dd-wrt.com/wiki/index.php/SNMP#Known_OID.C2.B4s_via_SNMP
 [prom-snmp]: https://github.com/prometheus/snmp_exporter
 [pr-snmp]: https://github.com/prometheus/snmp_exporter/pull/147
+[ddwrt-snmpexp]: https://github.com/daenney/ddwrt-snmp_exporter
