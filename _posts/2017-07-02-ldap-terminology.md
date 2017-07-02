@@ -31,9 +31,11 @@ or reading some of the documentation, hopefully this'll help.
   entry in the DIT
 * **RDN**: A relative distinguished name, a lookup key uniquely identifying an
   entry in the DIT relative to its parent
-* **Base DN** or **search base**: A DN to a point in the tree from which a
-  search will be performed. This allows you to scope queries to not have to
-  search the full tree
+* **Base DN** or **suffix**: A DN pointing to the root of your tree. Usually
+  searches for objects are done relative to the base DN and client tools can be
+  configured to do so. Any object returned allows contains the full DN, including
+  the suffix. You'll often see it in the form of a DNS name split into labels,
+  such as `dc=example,dc=com`
 * **Bind DN**: When authenticating to a directory service to perform an action
   we **bind** onto an entry that gives us the permission to perform this action.
   Very often the bind DN is the DN to your user but it can be a service account
