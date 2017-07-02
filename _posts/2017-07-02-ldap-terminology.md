@@ -4,9 +4,22 @@ title: "Directory Services 101: terminology"
 categories: tech
 ---
 
+This post is part of a series on directory services. Current available
+installments are:
+
+* [Introduction](/2017/07/02/ldap-terminology.html)
+* [Terminology](/2017/07/02/ldap-terminology.html)
+* Basic concepts
+* Designing the DIT
+* Setting up an LDAP server
+* Supporting RFC 2307bis
+* Securing your LDAP server
+
+---
+
 Directory services come with a lot of terminology and part of that lingo is
-what makes things difficult to understand to someone who hasn't heard of it
-before.
+what makes things difficult to understand to someone who hasn't heard any
+of it before.
 
 Below is a common list of terms you might run into in documentation and the
 rest of these posts and hopefully a simple enough explanation of what they
