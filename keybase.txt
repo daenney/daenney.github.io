@@ -1,0 +1,55 @@
+==================================================================
+https://keybase.io/daenney
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://daenney.github.io
+  * I am daenney (https://keybase.io/daenney) on keybase.
+  * I have a public key ASB1gi-EpgLS2cya2GWxB4eZvjJWPeNtduhEN_4oGBJX1go
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "012075822f84a602d2d9cc9ad865b1078799be32563de36d76e84437fe28181257d60a",
+      "host": "keybase.io",
+      "kid": "012075822f84a602d2d9cc9ad865b1078799be32563de36d76e84437fe28181257d60a",
+      "uid": "8be3748ff4425be651c7762c17fd6300",
+      "username": "daenney"
+    },
+    "merkle_root": {
+      "ctime": 1506541842,
+      "hash": "b017e43fe6b2bcf6ba5a222f4c7d65a928d83df72687b36aec4b8c53aa8e2aa09e6acf31c70ea51795f11e84a90fa610fab695f414b2e38fcfb6da3c0ada1122",
+      "hash_meta": "0bded95bf2f7d50a1d884528383c67f83c1c67ef1257bb5d9dc170973644c0ea",
+      "seqno": 1466435
+    },
+    "service": {
+      "hostname": "daenney.github.io",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 1
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "1.0.31"
+  },
+  "ctime": 1506541877,
+  "expire_in": 504576000,
+  "prev": "0a7f0029d20e3d582f22044ccc30b71d3df347d2a56542d1410ddef2cedb064d",
+  "seqno": 16,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgdYIvhKYC0tnMmthlsQeHmb4yVj3jbXboRDf+KBgSV9YKp3BheWxvYWTFA0l7ImJvZHkiOnsia2V5Ijp7ImVsZGVzdF9raWQiOiIwMTIwNzU4MjJmODRhNjAyZDJkOWNjOWFkODY1YjEwNzg3OTliZTMyNTYzZGUzNmQ3NmU4NDQzN2ZlMjgxODEyNTdkNjBhIiwiaG9zdCI6ImtleWJhc2UuaW8iLCJraWQiOiIwMTIwNzU4MjJmODRhNjAyZDJkOWNjOWFkODY1YjEwNzg3OTliZTMyNTYzZGUzNmQ3NmU4NDQzN2ZlMjgxODEyNTdkNjBhIiwidWlkIjoiOGJlMzc0OGZmNDQyNWJlNjUxYzc3NjJjMTdmZDYzMDAiLCJ1c2VybmFtZSI6ImRhZW5uZXkifSwibWVya2xlX3Jvb3QiOnsiY3RpbWUiOjE1MDY1NDE4NDIsImhhc2giOiJiMDE3ZTQzZmU2YjJiY2Y2YmE1YTIyMmY0YzdkNjVhOTI4ZDgzZGY3MjY4N2IzNmFlYzRiOGM1M2FhOGUyYWEwOWU2YWNmMzFjNzBlYTUxNzk1ZjExZTg0YTkwZmE2MTBmYWI2OTVmNDE0YjJlMzhmY2ZiNmRhM2MwYWRhMTEyMiIsImhhc2hfbWV0YSI6IjBiZGVkOTViZjJmN2Q1MGExZDg4NDUyODM4M2M2N2Y4M2MxYzY3ZWYxMjU3YmI1ZDlkYzE3MDk3MzY0NGMwZWEiLCJzZXFubyI6MTQ2NjQzNX0sInNlcnZpY2UiOnsiaG9zdG5hbWUiOiJkYWVubmV5LmdpdGh1Yi5pbyIsInByb3RvY29sIjoiaHR0cHM6In0sInR5cGUiOiJ3ZWJfc2VydmljZV9iaW5kaW5nIiwidmVyc2lvbiI6MX0sImNsaWVudCI6eyJuYW1lIjoia2V5YmFzZS5pbyBnbyBjbGllbnQiLCJ2ZXJzaW9uIjoiMS4wLjMxIn0sImN0aW1lIjoxNTA2NTQxODc3LCJleHBpcmVfaW4iOjUwNDU3NjAwMCwicHJldiI6IjBhN2YwMDI5ZDIwZTNkNTgyZjIyMDQ0Y2NjMzBiNzFkM2RmMzQ3ZDJhNTY1NDJkMTQxMGRkZWYyY2VkYjA2NGQiLCJzZXFubyI6MTYsInRhZyI6InNpZ25hdHVyZSJ9o3NpZ8RAqxBpG5nn8tHVKyZF83d++tuX4m8FcDYSZSEcHh7iEvtQSkTfcSHaQXyVKJ2g3I9n3Mg1r3ShIuI9SRvyB1ofCahzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIOo+tyZdcP9JIBmPUnDHmsmxM7uy5m85OVWnqubJ5Pewo3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/daenney
+
+==================================================================
