@@ -19,7 +19,7 @@ task :validate do
   HTMLProofer.check_directory('./_site', {
     :url_ignore => [/voxpupuli.org/],
     :check_html => true,
-    :assume_extensions => true,
+    :assume_extension => true,
   }).run
 end
 
