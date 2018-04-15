@@ -30,4 +30,9 @@ highlighter: rouge
 gist:
  noscript: false
 
+plugins:
+  - jekyll-paginate
+whitelist:
+  - jekyll-paginate
+
 exclude: ["Gemfile", "Gemfile.lock", "LICENSE", "CNAME", "README.md", "vendor"]
