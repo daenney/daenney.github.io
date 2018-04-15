@@ -12,7 +12,7 @@ twitter_username: daenney
 markdown: kramdown
 encoding: utf-8
 timezone: Etc/UTC
-permalink: /:year/:month/:day/:title.html
+permalink: /:year/:month/:day/:title
 kramdown:
   hard_wrap: false
   input: GFM
