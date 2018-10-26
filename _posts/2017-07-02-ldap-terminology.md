@@ -10,7 +10,7 @@ installments are:
 * [Introduction](/2017/07/02/ldap-terminology.html)
 * [Terminology](/2017/07/02/ldap-terminology.html)
 * [Basic concepts](/2017/08/26/ldap-basics.html)
-* Designing the DIT
+* [Designing the DIT](/2018/10/26/ldap-designing-dit)
 * Setting up an LDAP server
 * Supporting RFC 2307bis
 * Securing your LDAP server
@@ -69,7 +69,6 @@ or reading some of the documentation, hopefully this'll help.
   can be powered by multiple schema. A schema can define the same attributes
   and objectClasses as another schema but can then not be loaded at the same
   time
-
 
 If anything is missing or needs to be corrected feel free to send a PR on
 GitHub.

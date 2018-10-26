@@ -10,7 +10,7 @@ installments are:
 * [Introduction](/2017/07/02/ldap-terminology.html)
 * [Terminology](/2017/07/02/ldap-terminology.html)
 * [Basic concepts](/2017/08/26/ldap-basics.html)
-* Designing the DIT
+* [Designing the DIT](/2018/10/26/ldap-designing-dit)
 * Setting up an LDAP server
 * Supporting RFC 2307bis
 * Securing your LDAP server
@@ -129,7 +129,7 @@ The DN of an object always terminates with the base DN.
 
 I find this is best explained with a file system layout as an example:
 
-```
+```text
 /
 └── people/
     └── daenney
@@ -144,7 +144,7 @@ hierarchy. From the perspective of the root of the tree my RDN is
 If this were an actual directory service the DIT would look something more like
 this:
 
-```
+```text
 .
 └── dc=com
     └── dc=bubblegum
