@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Directory Services 101: Setting up an LDAP server
+title: "Directory Services 101: Setting up an LDAP server"
 categories: tech
 ---
 
