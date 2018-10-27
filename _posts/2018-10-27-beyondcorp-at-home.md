@@ -35,7 +35,7 @@ specific groups of people/machines.
     * [Authentication and authorization proxy](#authentication-and-authorization-proxy)
 * [Installing Keycloak](#installing-keycloak)
 * [Installing the oauth2 proxy](#installing-the-oauth2-proxy)
-* [Configurring nginx](#configurring-nginx)
+* [Configuring nginx](#configuring-nginx)
     * [Proxy Keycloak with TLS](#proxy-keycloak-with-tls)
     * [Require authentication for all resources](#require-authentication-for-all-resources)
 * [Rate limiting](#rate-limiting)
@@ -179,7 +179,7 @@ set_xauthrequest = true
 I'm not going into detail here as to what every option does, you can read that
 in the [proxy][proxy]'s own documentation.
 
-## Configurring nginx
+## Configuring nginx
 
 We need to do 2 things, proxy all requests on `sso.example.com` to the
 Keycloak server and protect all resources on `example.com/*`. You can also
