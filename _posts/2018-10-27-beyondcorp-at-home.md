@@ -80,8 +80,13 @@ This is achieved through a combination of [nginx][ngx] and [oauth2_proxy][proxy]
 ## Installing Keycloak
 
 Keycloak is a rather complex piece of software but has surprisingly accessible
-documentation. Read it, at least the installation and administration parts,
-before you get started on this.
+documentation. [Read it][kcdocs], at least the installation and administration
+parts, before you get started on this.
+
+Though I consider Keycloak to be a complex piece of software it is easy to run
+thanks to the Docker container they provide and the fact it can use an embedded
+database. You can also use an external database, like MySQL or Postgres, and it
+comes with clustering and high-availability capabilities.
 
 I run Keycloak as a Docker container:
 
@@ -560,6 +565,7 @@ spicy price tag.
 
 [ds101]: https://daenney.github.io/2017/07/02/ldap-101
 [kc]: https://www.keycloak.org/
+[kcdocs]: https://www.keycloak.org/docs/
 [kgate]: https://github.com/keycloak/keycloak-gatekeeper
 [ngx]: https://nginx.org/
 [proxy]: https://github.com/bitly/oauth2_proxy
