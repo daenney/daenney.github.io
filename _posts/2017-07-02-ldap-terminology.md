@@ -12,7 +12,7 @@ installments are:
 * [Basic concepts](/2017/08/26/ldap-basics.html)
 * [Designing the DIT](/2018/10/26/ldap-designing-dit)
 * [Setting up an LDAP server](/2018/10/27/ldap-server-setup)
-* Securing your LDAP server
+* [Securing your LDAP server](/2018/10/27/ldap-secure)
 * Writing and testing ACLs
 
 ---
