@@ -143,5 +143,10 @@ These roles would need to be maintained by automatic tooling, that takes care
 of the lifecycle of these entities. It should probably be kept in sync automatically
 with your payroll software, or be the thing that drives it.
 
+## Next up
+
+Now that I've gone through what to take into account when designing a DIT it's
+time to actually [spin up a directory service](/2018/10/27/ldap-server-setup)!
+
 [upg]: https://security.ias.edu/how-and-why-user-private-groups-unix
 [dag]: https://en.wikipedia.org/wiki/Directed_acyclic_graph

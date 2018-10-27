@@ -44,7 +44,7 @@ on and over the internet, making TLS a requirement.
     * [`ldaps://`](#ldaps)
     * [TLS version and cipher suite](#tls-version-and-cipher-suite)
     * [Require STARTTLS for `ldap://`](#require-starttls-for-ldap)
-* [Conclusion](#conclusion)
+* [Next up](#next-up)
 
 ## Two modes of TLS
 
@@ -179,8 +179,8 @@ longer possible to query our directory service using an unsecure connection.
 `olcSecurity` can be used to place additional requirements on the Security
 Strength Factor. [Zytrax has some documentation on that over here](http://www.zytrax.com/books/ldap/ch6/#security).
 
-## Conclusion
+## Next up
 
 With all of this in place you can now securely communicate with a directory
 service. However, this does nothing to limit what someone can do with a
-directory service. For that, we'll need to start writing ACLs.
+directory service. For that, we'll need to [start writing ACLs](/2018/10/27/ldap-writing-testing-acls).

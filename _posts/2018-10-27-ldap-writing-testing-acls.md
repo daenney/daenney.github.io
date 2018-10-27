@@ -325,6 +325,10 @@ There's a lot more resources on ACLs in OpenLDAP:
 * Access Control in the [OpenLDAP Administrator Guide][admin]
 * [Keeping your sanity while designing OpenLDAP ACLs][aclblog]
 
+Now that you have a directory service you can expand on your capabilities
+by [implementing a BeyondCorp style access layer](/2018/10/27/beyondcorp-at-home)
+to protect networked services and applications.
+
 [zytrax]: http://www.zytrax.com/books/ldap/
 [faq]: http://www.openldap.org/faq/data/cache/189.html
 [admin]: https://www.openldap.org/doc/admin24/access-control.html

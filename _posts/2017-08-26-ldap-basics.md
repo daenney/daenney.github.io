@@ -173,6 +173,7 @@ instead of nesting *organizationalUnit*s or other types.
 ## Next up
 
 Now that we've seen some basic parts of what make up entries in the DIT we need
-to talk a bit about how to design a DIT. Getting this right or wrong can make
-or break a directory services implementation and is an important part of
-ensuring your setup will be able to grow as your organisation grows.
+to talk a bit about [how to design a DIT](/2018/10/26/ldap-designing-dit).
+Getting this right or wrong can make or break a directory services implementation
+and is an important part of ensuring your setup will be able to grow as your
+organisation grows.
