@@ -300,7 +300,7 @@ you need to do is restart the container and you've got a clean slate.
 Once you're satisfied with the changes, apply them to production.
 
 Thankfully we can apply some automation to this! I use [pytest][pt] for this,
-paired with [pytest-docker][ptcoker] and the [ldap3][ldap3] library.
+paired with [pytest-docker][ptdocker] and the [ldap3][ldap3] library.
 
 Using pytest and ldap3 I can write tests against a "real" directory
 service. pytest-docker is responsible for spinning up a Docker container
