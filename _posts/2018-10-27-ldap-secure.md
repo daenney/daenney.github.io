@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Directory Services 101: Securing your LDAP server"
+date: "2018-10-27 10:00:00"
 categories: tech
 ---
 
