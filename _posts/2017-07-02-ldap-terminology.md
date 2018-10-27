@@ -11,9 +11,9 @@ installments are:
 * [Terminology](/2017/07/02/ldap-terminology.html)
 * [Basic concepts](/2017/08/26/ldap-basics.html)
 * [Designing the DIT](/2018/10/26/ldap-designing-dit)
-* Setting up an LDAP server
-* Supporting RFC 2307bis
+* [Setting up an LDAP server](/2018/10/27/ldap-server-setup)
 * Securing your LDAP server
+* Writing and testing ACLs
 
 ---
 
