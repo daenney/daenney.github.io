@@ -1,13 +1,14 @@
 ---
 layout: post
-title: "Directory Services 101: terminology"
+title: "Directory Services 101: Terminology"
+date: "2017-07-02 10:00:00"
 categories: tech
 ---
 
 This post is part of a series on directory services. Current available
 installments are:
 
-* [Introduction](/2017/07/02/ldap-terminology.html)
+* [Introduction](/2017/07/02/ldap-101.html)
 * [Terminology](/2017/07/02/ldap-terminology.html)
 * [Basic concepts](/2017/08/26/ldap-basics.html)
 * [Designing the DIT](/2018/10/26/ldap-designing-dit)
