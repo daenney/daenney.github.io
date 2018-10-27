@@ -14,7 +14,7 @@ installments are:
 * [Designing the DIT](/2018/10/26/ldap-designing-dit)
 * [Setting up an LDAP server](/2018/10/27/ldap-server-setup)
 * [Securing your LDAP server](/2018/10/27/ldap-secure)
-* Writing and testing ACLs
+* [Writing and testing ACLs](/2018/10/27/ldap-writing-testing-acls)
 
 ---
 
