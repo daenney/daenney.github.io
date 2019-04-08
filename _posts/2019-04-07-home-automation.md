@@ -32,7 +32,7 @@ Lets go through them.
 
 This shouldn't come as a surprise but basically: everything needs to work
 with the internet down. This immediately discards most Google powered stuff
-as it just won't work which. Fine by me because privacy isn't really a
+as it just won't work. Fine by me because privacy isn't really a
 thing they're known for anyway.
 
 Select IoT devices that you can talk directly to yourself using an API. For
@@ -177,7 +177,7 @@ The poll-based nature of the Hue HTTP API is part of why we moved away from Hue 
 onto Trådfri. Trådfri lets you subscribe to devices on its bridge. This fits much
 nicer with how we're using MQTT and means that the state of a device is almost
 instantly updated everywhere, instead of the short but noticeable 2s delay the
-Hue app suffers from. Trådfri bulbs, at the time, wewe also less expensive which
+Hue app suffers from. Trådfri bulbs, at the time, were also less expensive which
 made equipping the whole house with them much more financially bearable. The Hue
 bulbs do have a bigger color spectrum and white temperature range but the Trådfri
 bulbs turn out to be good enough for my needs.
