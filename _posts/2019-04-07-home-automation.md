@@ -169,34 +169,33 @@ so this works fine.
 
 Controlling lights and their colour is now a simple matter of publishing the
 right thing on MQTT. We only had to figure out the CoAP+DTLS thing once and
-now anyone can interact with them.
+now anyone can interact with them. You're also able to use the Trådfri
+remote controls and the state changes will propagate to everything.
 
 ### Philips Hue
 
 We have a Philips Hue software bridge, which emulates a v2 bridge. It exposes
-as the Hue HTTP API all the devices the Trådfri bridge proxies on MQTT. I can
-use the official Hue app with our software bridge to turn a light on/off or
+the Hue HTTP API and lets you interact with all "lightbulb" devices on the
+MQTT broker. This can be bulbs exposed by the Trådfri bridge, or an LED-strip
+controlled by something custom. As long as its a "lightbulb", it'll be available
+through the Hue API.
+
+It fakes a specific Hue model and device type based on the the characteristics
+of the lightbulb. For example a lightbulb with hue and saturation is exposed as
+a Hue A19 colour bulb, whereas one that only supports color temperature is exposed
+as a Hue White Ambiance bulb. Any lightbulb that only has the brightness
+characteristic is exposed as a Hue White dimmable bulb.
+
+I can use the official Hue app with our software bridge to turn a light on/off or
 set the color or brigthness on a bulb connected to the Trådfri gateway. If I then
 use the Trådfri app or physical remote to change the color, the next time the Hue
 app polls our fake Hue bridge you'll see the changes reflected in its UI.
-
-The poll-based nature of the Hue HTTP API is part of why we moved away from Hue and
-onto Trådfri. Trådfri lets you subscribe to devices on its bridge. This fits much
-nicer with how we're using MQTT and means that the state of a device is almost
-instantly updated everywhere, instead of the short but noticeable 2s delay the
-Hue app suffers from. Trådfri bulbs, at the time, were also less expensive which
-made equipping the whole house with them much more financially bearable. The Hue
-bulbs do have a bigger color spectrum and white temperature range but the Trådfri
-bulbs turn out to be good enough for my needs.
 
 I never had to teach the Hue bridge anything about the Trådfri gateway or protocol,
 only how to take the lightbulb accessory published on MQTT and turn it into a Hue
 bulb. It's essentially a Hue-JSON-to-HomeKit-JSON converter. This also means that
 anything under the "Friends of Hue" umbrella works despite the fact we don't have
 a physical Hue bridge.
-
-Now all that's left to do is implement the new UDP+DTLS based Hue Entertainment
-API so my TV can sync with the bulbs.
 
 I'll follow up this post with what it took to build a Philips Hue bridge
 emulator. It was wild.
@@ -217,6 +216,15 @@ Last there's a Raspberry Pi that exposes lirc devices onto MQTT. If you want to
 turn on the TV you publish a message on MQTT and the IR-bridge will translate
 that into IR codes and blast it out through a few diodes. This is how I can turn
 the TV on through HomeKit and how Node-RED triggers the robovac on work days.
+
+### HTApp
+
+This is a custom webapp that uses a websocket connection to our MQTT broker.
+It discovers a few different accessory types and places them on a floor plan
+of our home. You can use it to turn devices on and off and tweak brightness
+and colour of the lights. If another system is used to change the sate of a
+device, the UI will automatically receive the update over the websocket link
+and update itself.
 
 ### Prometheus integration
 
