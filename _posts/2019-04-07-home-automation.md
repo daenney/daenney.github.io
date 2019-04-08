@@ -42,7 +42,8 @@ a huge amount of devices that can all work without $vendor cloud.
 
 When that won't work, build your own. My robovac is dumb, no app, just IR,
 controlled by a Raspberry PI with an IR blaster. That IR Pi can also be used
-to turn on/off and control all kinds of devices like your TV, speakers etc.
+to turn on/off and control all kinds of devices like your TV, speakers etc. It
+replaces the need for something like a Logitech Harmony Hub.
 
 ## Private
 
