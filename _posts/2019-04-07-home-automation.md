@@ -73,11 +73,17 @@ Just about everything else relies on the fact that it's "inside your
 home" so behind a NAT. Everything flies over your network in plain text and
 most security schemes and keys are derived from MAC addresses.
 
-This is fixable by putting IoT devices in their own VLAN. Which
-incidentally also ensures the "Local only" thing because there is no path
-to the outside world.
+If you're thinking "but wait, Hue API has security". Well yes, but also
+kinda really not. We'll get into that in a separate blog post.
 
-Also, just no on the digital doorlocks. Don't.
+A lot of this is not fixably since there's no way to run your own firmware
+on these devices. Most firmware isn't open source either so good luck with
+that. The best you can do is put these devices in their own VLAN. This
+incidentally also ensures the "Local only" thing because there is no path
+to the outside world on our IoT VLAN.
+
+Also, just no on the digital doorlocks. Don't. I might have to build my
+own one day.
 
 ## Cloud optional
 
