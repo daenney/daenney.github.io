@@ -157,7 +157,7 @@ IKEA Trådfri gateway. Thanks to this is also exposes some light strips that
 are exposed by a controller directly attached to the strips running on a
 NodeMCU.
 
-The emulator discovers all "lightbulb" accessories on the MQTT
+The emulator discovers all `lightbulb` accessories on the MQTT
 broker and looks for the `hue`, `saturation`, `colorTemperature` and
 `brightness` characteristics. If `hue` and `saturation` are found it fakes
 a Hue A19 Extended Color bulb. `colorTemperature` is exposed for bulbs
@@ -179,7 +179,7 @@ to a room. Since the bulbs we have on MQTT are in reality groups we
 simply create a room for each bulb and assign the bulb to it. Because
 we gave our groups names that match the hard coded list of rooms
 Hue supports we can infer the `class` of the room. By setting the group
-named "Kitchen" to the "Kitchen" `class`, case sensitive and capitalised
+named "Kitchen" to the `Kitchen` `class`, case sensitive and capitalised
 I kid you not, we get a nice icon in the app, a cooking pot.
 
 The insistence of having every light assigned to a room is a bit
@@ -192,9 +192,11 @@ life though.
 
 ## Sensors
 
-I haven't gotten around to supporting sensors yet, but I'd like to at
+I haven't gotten around to supporting sensors yet, but I'd like to add
 least at support for our motion and contact sensors. They're also exposed
-using the same protocol on MQTT so this shouldn't be hard.
+by the MQTT broker so this shouldn't be hard to do. It'll take some time
+to dig through the sensors API documentation and figure out which
+devices to emulate in each case.
 
 ## Conclusion
 
