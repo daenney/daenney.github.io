@@ -232,10 +232,10 @@ userPassword: {CRYPT}$6$rounds=50000$b7166V2Na/kA9Hs$Q05k3jHtVI41pNohCkFQbfWsDXE
 
 dn: cn=test,ou=userPrivate,ou=groups,ou=example,dc=example,dc=com
 changetype: add
-objectClass: organizationalRole
 objectClass: posixGroup
 cn: test
 gidNumber: 10000
+memberUid: test
 ```
 
 To make this account an admin, we'll need to add it as a `roleOccupant` on
