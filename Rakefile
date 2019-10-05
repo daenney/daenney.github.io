@@ -42,8 +42,10 @@ task :test do
   Rake::Task['build'].invoke
   notify 'Validating site'
   Rake::Task['validate'].invoke
-  notify 'Checking for deprecation issues'
-  Rake::Task['doctor'].invoke
+  if !ENV.key?("CI")
+    notify 'Checking for deprecation issues'
+    Rake::Task['doctor'].invoke
+  end
 end
 
 def notify message
