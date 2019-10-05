@@ -4,6 +4,9 @@ title:  "PGP, one last try"
 categories: pgp gpg security
 ---
 
+**Update**: I've long since given up on PGP. It's just not worth it. Ignore
+this post.
+
 Over the years I've tried to use PGP multiple times. However, I've
 always failed miserably at managing keys and understanding the lifecycle
 involved. This is evident by searching the keyservers for my name, it'll
@@ -59,7 +62,7 @@ In order to not run into the same trouble as before I decided that:
     compatible device and will never leave that device.
 
 For the device that generates and stores my subkeys I decided to go with
-a [Yubikey NEO](https://www.yubico.com/products/yubikey-hardware/yubikey-neo/)
+a [Yubikey NEO](https://www.yubico.com/products/yubikey-hardware/yubikey-neo/yubikey-neo-u2f-2/)
 that I happened to have. Besides OpenPGP it also supports FIDO U2F
 and can function as an OTP generator. If you had to buy one now I would
 suggest buying a

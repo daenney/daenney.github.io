@@ -40,12 +40,8 @@ environment and uncheck "Use default modulepath" and change the
 modulepath to point to the `modules/` directory inside your Puppet
 repository.
 
-![IntelliJ Puppet Settings](https://www.dropbox.com/s/awgdfnesmam1eye/intellij-puppet-settings.png?raw=1)
-
 Save the changes and done. Now, open up any Puppet manifest file and try
 declaring a new APT source. Assuming you have
 [puppetlabs-apt](https://forge.puppetlabs.com/puppetlabs/apt) installed
 once you start typing the first letter of a parameter a code completion
 box will pop up to help you out.
-
-![IntelliJ Puppet Completion](https://www.dropbox.com/s/ema0asxfnpjenfb/intellij-puppet-compl.png?raw=1)

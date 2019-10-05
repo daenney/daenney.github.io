@@ -17,9 +17,17 @@ end
 desc 'Validate _site/ with html-proofer'
 task :validate do
   HTMLProofer.check_directory('./_site', {
-    :url_ignore => [/voxpupuli.org/],
+    :url_ignore => [
+      /localhost/,
+      /daenney\.github\.io\/gpg/,
+      /eurovision.tv/, # URL checks always 403 on this, I guess some kind of bot check
+    ],
     :check_html => true,
     :assume_extension => true,
+    :directory_index_file => "index.html",
+    :typhoeus => {
+      :headers => { "User-Agent" => "Mozilla/5.0 (Windows NT 10.0; rv:68.0) Gecko/20100101 Firefox/68.0" }
+    }
   }).run
 end
 
@@ -44,4 +52,5 @@ def notify message
   puts "#{message}...".blue
   puts '###################################################'.blue
   puts
+  STDOUT.flush
 end
