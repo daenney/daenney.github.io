@@ -4,6 +4,8 @@ title: "BeyondCorp @ Home: Authorization"
 categories: tech
 ---
 
+**NOTE**: A much simpler solution is describe in [BeyondCorp @ Home: Authentication and authorization proxy with OpenResty][followup_post]
+
 In [a previous post][prev_post] I showed you how to set
 up a "Lite" version of a BeyondCorp style access layer for a home or startup
 environment. The reason I called it lite is because though it does do full
@@ -274,3 +276,4 @@ you're proxying to. Do ensure that backend only trusts those headers if they're
 actually coming from the proxy!
 
 [prev_post]: /2018/10/27/beyondcorp-at-home
+[followup_post]: /2019/10/05/beyondcorp-at-home-authn-authz-openresty
