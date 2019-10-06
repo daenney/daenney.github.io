@@ -19,6 +19,7 @@ task :validate do
   HTMLProofer.check_directory('./_site', {
     :url_ignore => [
       /eurovision.tv/, # URL checks always 403 on this, I guess some kind of bot check
+      /transtechsocial.org/, # regularly times out
     ],
     :check_html => true,
     :assume_extension => true,
