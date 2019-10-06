@@ -5,6 +5,10 @@ date: "2018-10-27 17:00:00"
 categories: tech
 ---
 
+**Update 2019-10-06**: If you don't need SAML, consider swapping
+out Keycloak for Dex instead. You can read all about that in [this
+follow-up post](/2019/10/06/beyondcorp-at-home-dex-oidc).
+
 BeyondCorp is a different approach to securing access to networked applications
 and services.
 
