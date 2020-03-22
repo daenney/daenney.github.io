@@ -157,14 +157,6 @@ either way!
 
 ## The future
 
-Due to how we're expanding our footprint in the world and how much more
-connected our world has become, pandemics like this are going to become more
-common. As we've seen in the COVID-19 response, many of our governments are
-ill-prepared to cope with this, and our health systems can't handle this kind
-of pressure. The containment messures that we are now experiencing are likely
-to become the new norm until we develop the capability to eradicate these
-virusses permanently.
-
 Many of us want to believe that COVID-19 is just a fluke, a once in a lifetime
 event. I don't believe that's going to be the case. In the past two decades
 we've seen more of these events, like [SARS][sars], [swine flu][sw], [MERS][mers]
@@ -172,6 +164,14 @@ and now [COVID-19][cov19]. With the exception of COVID-19, many of these
 outbreaks didn't trigger containment protocols in Europe and the US and the
 mortality rate was relatively low in our part of the world. To us this all still
 feels new, like a bad dream, or a nightmare we know we'll wake up from.
+
+Due to how we're expanding our footprint in the world and how much more
+connected our world has become, pandemics like this are going to become more
+common. As we've seen in the COVID-19 response, many of our governments are
+ill-prepared to cope with this, and our health systems can't handle this kind
+of pressure. The containment messures that we are now experiencing are likely
+to become the new norm until we develop the capability to eradicate these
+virusses permanently.
 
 If you're a business, it's high time you re-evaluate how you work and ensure you
 tweak your processes so that you can work without requiring physical proximity of
