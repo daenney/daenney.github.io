@@ -237,7 +237,7 @@ support for it in the Prometheus SNMP exporter directly.
 [di-mipsel]: http://ftp.se.debian.org/debian/dists/stable/main/installer-mipsel/current/images/malta/netboot
 [build-mips]: https://github.com/prometheus/node_exporter/commit/bb9d4ade0b677d7f84deec9c354e372edba6a2ec
 [linux-26]: https://github.com/golang/go/wiki/MinimumRequirements#linux
-[malta]: https://www.linux-mips.org/wiki/MIPS_Malta
+[malta]: https://web.archive.org/web/20200812184636/https://www.linux-mips.org/wiki/MIPS_Malta
 [cloexec]: https://www.gnu.org/software/libc/manual/html_node/Descriptor-Flags.html
 [sock-cloexec]: http://man7.org/linux/man-pages/man2/socket.2.html#DESCRIPTION
 [ddwrt-go]: https://github.com/CodeMonk/dd-wrt-go

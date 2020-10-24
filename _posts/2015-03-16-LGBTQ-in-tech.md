@@ -58,7 +58,7 @@ My experience with the tech community has always been very positive but
 I realise not everyone else's has. It shows in that there is the
 [#DiversityInTech](https://twitter.com/hashtag/diversityintech)
 hashtag, it shows in that we need to
-[talk about this](https://puppetlabs.com/blog/womenintech-jessica-devita-microsoft),
+[talk about this](https://web.archive.org/web/20190903192339/https://puppet.com/blog/womenintech-jessica-devita-of-microsoft),
 it shows in that efforts like [TransTech](http://transtechsocial.org) exist.
 But we do have those efforts, we do talk. It's not always pretty but we're
 working on it, we're trying to get better at it. It's time I help out and I
