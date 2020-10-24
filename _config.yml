@@ -1,7 +1,7 @@
 # Site settings
 title: Daenney
 author: Daniele Sluijters
-description: Working on the future while maintaining the past.
+description: Working on the future, learning from the past
 meta_description: Daenney's blog and ramblings
 baseurl: ""
 url: "https://daenney.github.io"
@@ -14,10 +14,15 @@ encoding: utf-8
 timezone: Etc/UTC
 permalink: /:year/:month/:day/:title
 kramdown:
- input: GFM
- hard_wrap: false
- math_engine: mathjax
- syntax_highlighter: rouge
+  input: GFM
+  hard_wrap: false
+  math_engine: mathjax
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    span:
+      line_numbers: false
+    block:
+      line_numbers: true
 logo: false
 paginate: 10
 future: true
@@ -25,8 +30,6 @@ jailed: false
 gfm_quirks: paragraph_end
 lsi: false
 safe: true
-markdown: kramdown
-highlighter: rouge
 gist:
  noscript: false
 
